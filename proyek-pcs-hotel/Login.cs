@@ -25,34 +25,101 @@ namespace proyek_pcs_hotel
             {
                 if (mode == "Receptionist")
                 {
-                    Receptionist f = new Receptionist();
-                    f.Closed += (s, args) => this.Close();
-                    this.Hide();
-                    f.Show();
+                    if (true)//CEK USERNAME
+                    {
+                        Receptionist f = new Receptionist();
+                        f.Closed += (s, args) => this.Close();
+                        this.Hide();
+                        f.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Username / Password Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    } 
                 }
                 else if (mode == "Restoran")
                 {
-
+                    if (true)//CEK USERNAME
+                    {
+                        Restoran f = new Restoran();
+                        f.Closed += (s, args) => this.Close();
+                        this.Hide();
+                        f.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Username / Password Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else if (mode == "Dapur")
                 {
-
+                    if (true)//CEK USERNAME
+                    {
+                        Dapur f = new Dapur();
+                        f.Closed += (s, args) => this.Close();
+                        this.Hide();
+                        f.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Username / Password Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else if (mode == "Laundry")
                 {
-
+                    if (true)//CEK USERNAME
+                    {
+                        Laundry f = new Laundry();
+                        f.Closed += (s, args) => this.Close();
+                        this.Hide();
+                        f.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Username / Password Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else if (mode == "Self_Booking")
                 {
-
+                    if (true)//CEK USERNAME
+                    {
+                        Self_Booking f = new Self_Booking();
+                        f.Closed += (s, args) => this.Close();
+                        this.Hide();
+                        f.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Username / Password Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else if (mode == "HRD")
                 {
-
+                    if (true)//CEK USERNAME
+                    {
+                        HRD f = new HRD();
+                        f.Closed += (s, args) => this.Close();
+                        this.Hide();
+                        f.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Username / Password Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else if (mode == "Laporan")
                 {
-
+                    if (true)//CEK USERNAME
+                    {
+                        Laporan f = new Laporan();
+                        f.Closed += (s, args) => this.Close();
+                        this.Hide();
+                        f.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Username / Password Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }

@@ -58,6 +58,11 @@
     <Compile Include="HRD.Designer.cs">
       <DependentUpon>HRD.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lang.resx</DependentUpon>
+    </Compile>
     <Compile Include="Laporan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +112,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HRD.resx">
       <DependentUpon>HRD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lang.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Lang.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Laporan.resx">
       <DependentUpon>Laporan.cs</DependentUpon>
