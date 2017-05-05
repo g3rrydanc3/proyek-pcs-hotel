@@ -102,6 +102,18 @@
     <Compile Include="Self Booking.Designer.cs">
       <DependentUpon>Self Booking.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Dapur.resx">
+      <DependentUpon>Dapur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRD.resx">
+      <DependentUpon>HRD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan.resx">
+      <DependentUpon>Laporan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laundry.resx">
+      <DependentUpon>Laundry.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +129,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Receptionist.resx">
+      <DependentUpon>Receptionist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Restoran.resx">
+      <DependentUpon>Restoran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Self Booking.resx">
+      <DependentUpon>Self Booking.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
