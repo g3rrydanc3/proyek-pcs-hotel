@@ -10,19 +10,17 @@ using System.Windows.Forms;
 
 namespace proyek_pcs_hotel
 {
-    public partial class Dapur : Form
+    public partial class Dapur_SoldOut : Form
     {
-        public Dapur()
+        public Dapur_SoldOut()
         {
             InitializeComponent();
         }
 
-        private void soldOutToolStripMenuItem_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            if (new Dapur_SoldOut().ShowDialog() == DialogResult.OK)
-            {
-                //refresh
-            }
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

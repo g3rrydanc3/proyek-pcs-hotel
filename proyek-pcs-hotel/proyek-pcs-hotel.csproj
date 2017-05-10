@@ -54,6 +54,12 @@
     <Compile Include="Dapur.Designer.cs">
       <DependentUpon>Dapur.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dapur_SoldOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dapur_SoldOut.Designer.cs">
+      <DependentUpon>Dapur_SoldOut.cs</DependentUpon>
+    </Compile>
     <Compile Include="HRD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </Compile>
     <EmbeddedResource Include="Dapur.resx">
       <DependentUpon>Dapur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dapur_SoldOut.resx">
+      <DependentUpon>Dapur_SoldOut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HRD.resx">
       <DependentUpon>HRD.cs</DependentUpon>
