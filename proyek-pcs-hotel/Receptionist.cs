@@ -15,6 +15,20 @@ namespace proyek_pcs_hotel
         public Receptionist()
         {
             InitializeComponent();
+            receptionist_List1.Hide();
+            receptionist_Booking1.Show();
+        }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            receptionist_Booking1.Show();
+            receptionist_List1.Hide();
+        }
+
+        private void searchKamarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            receptionist_Booking1.Hide();
+            receptionist_List1.Show();
         }
     }
 }

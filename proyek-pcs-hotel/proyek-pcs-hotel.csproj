@@ -115,6 +115,18 @@
     <Compile Include="Self Booking.Designer.cs">
       <DependentUpon>Self Booking.cs</DependentUpon>
     </Compile>
+    <Compile Include="Receptionist_List.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Receptionist_List.Designer.cs">
+      <DependentUpon>Receptionist_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receptionist_Booking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Receptionist_Booking.Designer.cs">
+      <DependentUpon>Receptionist_Booking.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Dapur.resx">
       <DependentUpon>Dapur.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +169,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Self Booking.resx">
       <DependentUpon>Self Booking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receptionist_List.resx">
+      <DependentUpon>Receptionist_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receptionist_Booking.resx">
+      <DependentUpon>Receptionist_Booking.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
