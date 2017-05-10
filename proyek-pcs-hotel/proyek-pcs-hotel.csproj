@@ -115,6 +115,18 @@
     <Compile Include="Self Booking.Designer.cs">
       <DependentUpon>Self Booking.cs</DependentUpon>
     </Compile>
+    <Compile Include="SelfBooking_Step2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelfBooking_Step2.Designer.cs">
+      <DependentUpon>SelfBooking_Step2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelfBooking_Step3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelfBooking_Step3.Designer.cs">
+      <DependentUpon>SelfBooking_Step3.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Dapur.resx">
       <DependentUpon>Dapur.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +169,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Self Booking.resx">
       <DependentUpon>Self Booking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelfBooking_Step2.resx">
+      <DependentUpon>SelfBooking_Step2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelfBooking_Step3.resx">
+      <DependentUpon>SelfBooking_Step3.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
