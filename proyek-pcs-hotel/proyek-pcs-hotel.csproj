@@ -147,6 +147,18 @@
     <Compile Include="Receptionist.Designer.cs">
       <DependentUpon>Receptionist.cs</DependentUpon>
     </Compile>
+    <Compile Include="Receptionist_Booking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Receptionist_Booking.Designer.cs">
+      <DependentUpon>Receptionist_Booking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receptionist_List.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Receptionist_List.Designer.cs">
+      <DependentUpon>Receptionist_List.cs</DependentUpon>
+    </Compile>
     <Compile Include="Restoran.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,6 +240,12 @@
     </Compile>
     <EmbeddedResource Include="Receptionist.resx">
       <DependentUpon>Receptionist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receptionist_Booking.resx">
+      <DependentUpon>Receptionist_Booking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receptionist_List.resx">
+      <DependentUpon>Receptionist_List.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Restoran.resx">
       <DependentUpon>Restoran.cs</DependentUpon>

@@ -46,8 +46,8 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 13F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 13F));
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 3);
@@ -57,7 +57,6 @@
             this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 0, 5);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -66,9 +65,9 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(778, 509);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(519, 331);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // label3
@@ -76,10 +75,9 @@
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(4, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(290, 37);
+            this.label3.Size = new System.Drawing.Size(195, 25);
             this.label3.TabIndex = 4;
             this.label3.Text = "Search";
             // 
@@ -88,10 +86,9 @@
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(302, 37);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(204, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(222, 25);
+            this.label2.Size = new System.Drawing.Size(149, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Nomor Kamar : ";
             // 
@@ -100,10 +97,9 @@
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 37);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(3, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(290, 25);
+            this.label1.Size = new System.Drawing.Size(195, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tipe Kamar : ";
             // 
@@ -117,29 +113,26 @@
             "Deluxe",
             "Suite",
             "President Suite"});
-            this.comboBox1.Location = new System.Drawing.Point(4, 66);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox1.Location = new System.Drawing.Point(3, 44);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(290, 28);
+            this.comboBox1.Size = new System.Drawing.Size(195, 21);
             this.comboBox1.TabIndex = 3;
             // 
             // textBox1
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(302, 66);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Location = new System.Drawing.Point(204, 44);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(222, 26);
+            this.textBox1.Size = new System.Drawing.Size(149, 20);
             this.textBox1.TabIndex = 1;
             // 
             // button1
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(532, 66);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(359, 44);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(242, 42);
+            this.button1.Size = new System.Drawing.Size(161, 27);
             this.button1.TabIndex = 5;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = true;
@@ -150,19 +143,19 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableLayoutPanel1.SetColumnSpan(this.dataGridView1, 3);
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 116);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 77);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(770, 389);
+            this.dataGridView1.Size = new System.Drawing.Size(517, 266);
             this.dataGridView1.TabIndex = 6;
             // 
             // Receptionist_Booking
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Receptionist_Booking";
-            this.Size = new System.Drawing.Size(778, 509);
+            this.Size = new System.Drawing.Size(519, 331);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
