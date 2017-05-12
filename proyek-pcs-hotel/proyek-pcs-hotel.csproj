@@ -12,6 +12,22 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -165,23 +181,29 @@
     <Compile Include="Restoran\Restoran.Designer.cs">
       <DependentUpon>Restoran.cs</DependentUpon>
     </Compile>
-    <Compile Include="Self_Booking\Self Booking.cs">
+    <Compile Include="Self_Booking\SB.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Self_Booking\Self Booking.Designer.cs">
-      <DependentUpon>Self Booking.cs</DependentUpon>
+    <Compile Include="Self_Booking\SB.Designer.cs">
+      <DependentUpon>SB.cs</DependentUpon>
     </Compile>
-    <Compile Include="Self_Booking\SelfBooking_Step2.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Self_Booking\SB_1.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Self_Booking\SelfBooking_Step2.Designer.cs">
-      <DependentUpon>SelfBooking_Step2.cs</DependentUpon>
+    <Compile Include="Self_Booking\SB_1.Designer.cs">
+      <DependentUpon>SB_1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Self_Booking\SelfBooking_Step3.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Self_Booking\SB_2.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Self_Booking\SelfBooking_Step3.Designer.cs">
-      <DependentUpon>SelfBooking_Step3.cs</DependentUpon>
+    <Compile Include="Self_Booking\SB_2.Designer.cs">
+      <DependentUpon>SB_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Self_Booking\SB_3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Self_Booking\SB_3.Designer.cs">
+      <DependentUpon>SB_3.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Dapur\Dapur.resx">
       <DependentUpon>Dapur.cs</DependentUpon>
@@ -237,6 +259,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Receptionist\Receptionist.resx">
       <DependentUpon>Receptionist.cs</DependentUpon>
@@ -250,14 +273,17 @@
     <EmbeddedResource Include="Restoran\Restoran.resx">
       <DependentUpon>Restoran.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Self_Booking\Self Booking.resx">
-      <DependentUpon>Self Booking.cs</DependentUpon>
+    <EmbeddedResource Include="Self_Booking\SB.resx">
+      <DependentUpon>SB.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Self_Booking\SelfBooking_Step2.resx">
-      <DependentUpon>SelfBooking_Step2.cs</DependentUpon>
+    <EmbeddedResource Include="Self_Booking\SB_1.resx">
+      <DependentUpon>SB_1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Self_Booking\SelfBooking_Step3.resx">
-      <DependentUpon>SelfBooking_Step3.cs</DependentUpon>
+    <EmbeddedResource Include="Self_Booking\SB_2.resx">
+      <DependentUpon>SB_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Self_Booking\SB_3.resx">
+      <DependentUpon>SB_3.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -277,6 +303,18 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Lamar_Pekerjaan\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

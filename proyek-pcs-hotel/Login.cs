@@ -83,7 +83,7 @@ namespace proyek_pcs_hotel
                 {
                     if (true)//CEK USERNAME
                     {
-                        Self_Booking f = new Self_Booking();
+                        SB f = new SB();
                         f.Closed += (s, args) => this.Close();
                         this.Hide();
                         f.Show();
