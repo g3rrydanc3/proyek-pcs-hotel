@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace proyek_pcs_hotel
 {
-    public partial class Laundry : Form
+    public partial class LamarPekerjaan : Form
     {
-        public Laundry()
+        public LamarPekerjaan()
         {
             InitializeComponent();
-            laundry_detail1.Hide();
-            //laundry_detail1.dataGridView1.Click += new EventHandler()
-        }
-
-        private void detailLaundryToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            laundry_detail1.Show();
         }
     }
 }
