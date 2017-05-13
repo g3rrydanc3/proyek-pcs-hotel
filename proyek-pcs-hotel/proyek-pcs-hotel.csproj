@@ -126,6 +126,12 @@
     <Compile Include="HRD\HRD_Recruitment_Summary.Designer.cs">
       <DependentUpon>HRD_Recruitment_Summary.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lamar_Pekerjaan\LamarPekerjaan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lamar_Pekerjaan\LamarPekerjaan.Designer.cs">
+      <DependentUpon>LamarPekerjaan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lang.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -142,6 +148,12 @@
     </Compile>
     <Compile Include="Laundry\Laundry.Designer.cs">
       <DependentUpon>Laundry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laundry\Laundry_detail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Laundry\Laundry_detail.Designer.cs">
+      <DependentUpon>Laundry_detail.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -235,6 +247,9 @@
     <EmbeddedResource Include="HRD\HRD_Recruitment_Summary.resx">
       <DependentUpon>HRD_Recruitment_Summary.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Lamar_Pekerjaan\LamarPekerjaan.resx">
+      <DependentUpon>LamarPekerjaan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lang.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Lang.Designer.cs</LastGenOutput>
@@ -244,6 +259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Laundry\Laundry.resx">
       <DependentUpon>Laundry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laundry\Laundry_detail.resx">
+      <DependentUpon>Laundry_detail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -301,9 +319,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Lamar_Pekerjaan\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
       <Visible>False</Visible>
