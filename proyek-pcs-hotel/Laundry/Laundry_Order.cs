@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace proyek_pcs_hotel
+namespace proyek_pcs_hotel.Laundry_Order
 {
-    public partial class Laundry_Detail : UserControl
+    public partial class Laundry_Order : UserControl
     {
-        public Laundry_Detail()
+        public Laundry_Order()
         {
             InitializeComponent();
         }

@@ -15,13 +15,20 @@ namespace proyek_pcs_hotel
         public Laundry()
         {
             InitializeComponent();
-            laundry_detail1.Hide();
-            //laundry_detail1.dataGridView1.Click += new EventHandler()
+            laundry_Detail1.Hide();
+            laundry_Order1.Show();
+        }
+
+        private void newLaundryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            laundry_Detail1.Hide();
+            laundry_Order1.Show();
         }
 
         private void detailLaundryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            laundry_detail1.Show();
+            laundry_Detail1.Show();
+            laundry_Order1.Hide();
         }
     }
 }

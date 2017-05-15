@@ -1,6 +1,6 @@
 ﻿namespace proyek_pcs_hotel
 {
-    partial class Laundry_detail
+    partial class Laundry_Detail
     {
         /// <summary> 
         /// Required designer variable.
@@ -52,17 +52,18 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(394, 268);
+            this.dataGridView1.Size = new System.Drawing.Size(394, 270);
             this.dataGridView1.TabIndex = 0;
             // 
-            // Laundry_detail
+            // Laundry_Detail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "Laundry_detail";
+            this.Name = "Laundry_Detail";
             this.Size = new System.Drawing.Size(400, 276);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

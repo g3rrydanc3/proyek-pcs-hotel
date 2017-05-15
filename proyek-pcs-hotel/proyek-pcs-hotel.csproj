@@ -149,11 +149,17 @@
     <Compile Include="Laundry\Laundry.Designer.cs">
       <DependentUpon>Laundry.cs</DependentUpon>
     </Compile>
-    <Compile Include="Laundry\Laundry_detail.cs">
+    <Compile Include="Laundry\Laundry_Detail.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Laundry\Laundry_detail.Designer.cs">
-      <DependentUpon>Laundry_detail.cs</DependentUpon>
+    <Compile Include="Laundry\Laundry_Detail.Designer.cs">
+      <DependentUpon>Laundry_Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laundry\Laundry_Order.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Laundry\Laundry_Order.Designer.cs">
+      <DependentUpon>Laundry_Order.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -260,8 +266,11 @@
     <EmbeddedResource Include="Laundry\Laundry.resx">
       <DependentUpon>Laundry.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Laundry\Laundry_detail.resx">
-      <DependentUpon>Laundry_detail.cs</DependentUpon>
+    <EmbeddedResource Include="Laundry\Laundry_Detail.resx">
+      <DependentUpon>Laundry_Detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laundry\Laundry_Order.resx">
+      <DependentUpon>Laundry_Order.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
