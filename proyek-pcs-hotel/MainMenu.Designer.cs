@@ -116,6 +116,7 @@
             this.button8.TabIndex = 7;
             this.button8.Text = "Lamar Pekerjaan";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // MainMenu
             // 

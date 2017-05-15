@@ -60,5 +60,10 @@ namespace proyek_pcs_hotel
         {
             openForm("Laporan");
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            openForm("Lamar");
+        }
     }
 }

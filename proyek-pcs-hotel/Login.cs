@@ -121,6 +121,20 @@ namespace proyek_pcs_hotel
                         MessageBox.Show("Username / Password Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+                else if (mode == "Lamar")
+                {
+                    if (true)//CEK USERNAME
+                    {
+                        LamarPekerjaan f = new LamarPekerjaan();
+                        f.Closed += (s, args) => this.Close();
+                        this.Hide();
+                        f.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Username / Password Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
         }
     }
