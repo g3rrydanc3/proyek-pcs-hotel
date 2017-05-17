@@ -15,20 +15,6 @@ namespace proyek_pcs_hotel
         public Laundry()
         {
             InitializeComponent();
-            laundry_Detail1.Hide();
-            laundry_Order1.Show();
-        }
-
-        private void newLaundryToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            laundry_Detail1.Hide();
-            laundry_Order1.Show();
-        }
-
-        private void detailLaundryToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            laundry_Detail1.Show();
-            laundry_Order1.Hide();
         }
     }
 }

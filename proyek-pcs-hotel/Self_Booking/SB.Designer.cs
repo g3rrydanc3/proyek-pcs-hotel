@@ -38,7 +38,7 @@
             this.sB_31.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sB_31.Location = new System.Drawing.Point(0, 0);
             this.sB_31.Name = "sB_31";
-            this.sB_31.Size = new System.Drawing.Size(837, 741);
+            this.sB_31.Size = new System.Drawing.Size(784, 561);
             this.sB_31.TabIndex = 2;
             // 
             // sB_21
@@ -46,7 +46,7 @@
             this.sB_21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sB_21.Location = new System.Drawing.Point(0, 0);
             this.sB_21.Name = "sB_21";
-            this.sB_21.Size = new System.Drawing.Size(837, 741);
+            this.sB_21.Size = new System.Drawing.Size(784, 561);
             this.sB_21.TabIndex = 1;
             // 
             // sB_11
@@ -54,17 +54,18 @@
             this.sB_11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sB_11.Location = new System.Drawing.Point(0, 0);
             this.sB_11.Name = "sB_11";
-            this.sB_11.Size = new System.Drawing.Size(837, 741);
+            this.sB_11.Size = new System.Drawing.Size(784, 561);
             this.sB_11.TabIndex = 0;
             // 
             // SB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(837, 741);
+            this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.sB_31);
             this.Controls.Add(this.sB_21);
             this.Controls.Add(this.sB_11);
+            this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SB";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

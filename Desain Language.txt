@@ -1,0 +1,12 @@
+1. Font memakai Segoe UI, 12pt
+   Header memakai font Segoe UI, 16pt, TextAlign MiddleCenter
+3. Biasakan form size 800;600
+4. Form StartPosition : CenterScreen
+5. Form WindowState : Maximized
+6. Form AutoScaleMode : Dpi
+7. Semua component di dalam form/user control = Dock : Fill
+
+Note :
+1. Dibuat dock : fill jika semua component sudah selesai dibuat
+2. Jika mau edit component, dock : none dahulu
+3. aktifkan view->other document->document outline untuk mempermudah melihat component

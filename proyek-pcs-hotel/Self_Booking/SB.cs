@@ -26,6 +26,16 @@ namespace proyek_pcs_hotel
             sB_11.Hide();
             sB_21.Show();
             sB_31.Hide();
+            sB_21.tableLayoutPanel1.Padding = new Padding(0, 0, System.Windows.Forms.SystemInformation.VerticalScrollBarWidth, 0);
+            for (int i = 0; i < 5; i++)
+            {
+                sB_21.tableLayoutPanel1.RowCount = sB_21.tableLayoutPanel1.RowCount + 1;
+                sB_21.tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+                Self_Booking.SB_RoomList f = new Self_Booking.SB_RoomList();
+                f.Dock = DockStyle.Fill;
+                sB_21.tableLayoutPanel1.Controls.Add(f, 0, sB_21.tableLayoutPanel1.RowCount - 1);
+            }
+            
         }
     }
 }

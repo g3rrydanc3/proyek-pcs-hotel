@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace proyek_pcs_hotel
+namespace proyek_pcs_hotel.Self_Booking
 {
-    public partial class Laundry_Detail : UserControl
+    public partial class SB_RoomList : UserControl
     {
-        public Laundry_Detail()
+        public SB_RoomList()
         {
             InitializeComponent();
         }

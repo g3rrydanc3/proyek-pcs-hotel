@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label1.Text" xml:space="preserve">
+    <value> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed felis vulputate, congue sapien non, condimentum erat. Donec pulvinar erat ut eros pellentesque, vel malesuada lectus auctor. Sed at tellus augue. Nullam id ullamcorper nibh, eu tincidunt massa. Pellentesque vel neque at augue iaculis fermentum. C</value>
+  </data>
 </root>

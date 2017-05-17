@@ -34,50 +34,52 @@
             this.buttonTakeAway = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.buttonDelivery = new System.Windows.Forms.Button();
             this.buttonOrderDrink = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.label4 = new System.Windows.Forms.Label();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.buttonOrderFood = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.messageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 16);
+            this.dataGridView2.Location = new System.Drawing.Point(3, 24);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(187, 174);
+            this.dataGridView2.Size = new System.Drawing.Size(187, 151);
             this.dataGridView2.TabIndex = 4;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 284);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 289);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(187, 174);
+            this.dataGridView1.Size = new System.Drawing.Size(187, 151);
             this.dataGridView1.TabIndex = 3;
             // 
             // buttonDineIn
             // 
             this.buttonDineIn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonDineIn.Location = new System.Drawing.Point(203, 461);
+            this.buttonDineIn.Location = new System.Drawing.Point(203, 443);
             this.buttonDineIn.Margin = new System.Windows.Forms.Padding(0);
             this.buttonDineIn.Name = "buttonDineIn";
             this.tableLayoutPanel1.SetRowSpan(this.buttonDineIn, 3);
-            this.buttonDineIn.Size = new System.Drawing.Size(193, 76);
+            this.buttonDineIn.Size = new System.Drawing.Size(193, 89);
             this.buttonDineIn.TabIndex = 0;
             this.buttonDineIn.Text = "Dine In";
             this.buttonDineIn.UseVisualStyleBackColor = true;
@@ -85,11 +87,11 @@
             // buttonTakeAway
             // 
             this.buttonTakeAway.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonTakeAway.Location = new System.Drawing.Point(396, 461);
+            this.buttonTakeAway.Location = new System.Drawing.Point(396, 443);
             this.buttonTakeAway.Margin = new System.Windows.Forms.Padding(0);
             this.buttonTakeAway.Name = "buttonTakeAway";
             this.tableLayoutPanel1.SetRowSpan(this.buttonTakeAway, 3);
-            this.buttonTakeAway.Size = new System.Drawing.Size(193, 76);
+            this.buttonTakeAway.Size = new System.Drawing.Size(193, 89);
             this.buttonTakeAway.TabIndex = 1;
             this.buttonTakeAway.Text = "Take Away";
             this.buttonTakeAway.UseVisualStyleBackColor = true;
@@ -117,7 +119,7 @@
             this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.dataGridView2, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 24);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 29);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 10;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -130,7 +132,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333611F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(784, 537);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(784, 532);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // label1
@@ -139,46 +141,18 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(187, 13);
+            this.label1.Size = new System.Drawing.Size(187, 21);
             this.label1.TabIndex = 5;
             this.label1.Text = "Food";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(3, 268);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(187, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Drink";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(3, 461);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(187, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Quantity Drink";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown1.Location = new System.Drawing.Point(3, 477);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(187, 20);
-            this.numericUpDown1.TabIndex = 9;
             // 
             // buttonDelivery
             // 
             this.buttonDelivery.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonDelivery.Location = new System.Drawing.Point(589, 461);
+            this.buttonDelivery.Location = new System.Drawing.Point(589, 443);
             this.buttonDelivery.Margin = new System.Windows.Forms.Padding(0);
             this.buttonDelivery.Name = "buttonDelivery";
             this.tableLayoutPanel1.SetRowSpan(this.buttonDelivery, 3);
-            this.buttonDelivery.Size = new System.Drawing.Size(195, 76);
+            this.buttonDelivery.Size = new System.Drawing.Size(195, 89);
             this.buttonDelivery.TabIndex = 2;
             this.buttonDelivery.Text = "Delivery To Room";
             this.buttonDelivery.UseVisualStyleBackColor = true;
@@ -186,59 +160,96 @@
             // buttonOrderDrink
             // 
             this.buttonOrderDrink.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonOrderDrink.Location = new System.Drawing.Point(3, 503);
+            this.buttonOrderDrink.Location = new System.Drawing.Point(3, 502);
             this.buttonOrderDrink.Name = "buttonOrderDrink";
-            this.buttonOrderDrink.Size = new System.Drawing.Size(187, 31);
+            this.buttonOrderDrink.Size = new System.Drawing.Size(187, 27);
             this.buttonOrderDrink.TabIndex = 10;
             this.buttonOrderDrink.Text = "Order Drink";
             this.buttonOrderDrink.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Location = new System.Drawing.Point(3, 443);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(187, 21);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Quantity Drink";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numericUpDown1.Location = new System.Drawing.Point(3, 467);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(187, 29);
+            this.numericUpDown1.TabIndex = 9;
             // 
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableLayoutPanel1.SetColumnSpan(this.dataGridView3, 3);
             this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView3.Location = new System.Drawing.Point(206, 16);
+            this.dataGridView3.Location = new System.Drawing.Point(206, 24);
             this.dataGridView3.Name = "dataGridView3";
             this.tableLayoutPanel1.SetRowSpan(this.dataGridView3, 6);
-            this.dataGridView3.Size = new System.Drawing.Size(575, 442);
+            this.dataGridView3.Size = new System.Drawing.Size(575, 416);
             this.dataGridView3.TabIndex = 7;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(784, 24);
-            this.menuStrip1.TabIndex = 4;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Location = new System.Drawing.Point(3, 193);
+            this.label4.Location = new System.Drawing.Point(3, 178);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(187, 13);
+            this.label4.Size = new System.Drawing.Size(187, 21);
             this.label4.TabIndex = 11;
             this.label4.Text = "Quantity Food";
             // 
             // numericUpDown2
             // 
             this.numericUpDown2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown2.Location = new System.Drawing.Point(3, 209);
+            this.numericUpDown2.Location = new System.Drawing.Point(3, 202);
             this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(187, 20);
+            this.numericUpDown2.Size = new System.Drawing.Size(187, 29);
             this.numericUpDown2.TabIndex = 12;
             // 
             // buttonOrderFood
             // 
             this.buttonOrderFood.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonOrderFood.Location = new System.Drawing.Point(3, 235);
+            this.buttonOrderFood.Location = new System.Drawing.Point(3, 237);
             this.buttonOrderFood.Name = "buttonOrderFood";
-            this.buttonOrderFood.Size = new System.Drawing.Size(187, 30);
+            this.buttonOrderFood.Size = new System.Drawing.Size(187, 25);
             this.buttonOrderFood.TabIndex = 13;
             this.buttonOrderFood.Text = "Order Food";
             this.buttonOrderFood.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Location = new System.Drawing.Point(3, 265);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(187, 21);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Drink";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.messageToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(784, 29);
+            this.menuStrip1.TabIndex = 4;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // messageToolStripMenuItem
+            // 
+            this.messageToolStripMenuItem.Name = "messageToolStripMenuItem";
+            this.messageToolStripMenuItem.Size = new System.Drawing.Size(83, 25);
+            this.messageToolStripMenuItem.Text = "Message";
             // 
             // Restoran
             // 
@@ -247,6 +258,7 @@
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Restoran";
@@ -260,6 +272,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,9 +293,10 @@
         private System.Windows.Forms.Button buttonTakeAway;
         private System.Windows.Forms.Button buttonDelivery;
         private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.Button buttonOrderFood;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem messageToolStripMenuItem;
     }
 }

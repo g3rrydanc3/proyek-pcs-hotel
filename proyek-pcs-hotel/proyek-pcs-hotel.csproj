@@ -84,18 +84,6 @@
     <Compile Include="HRD\HRD.Designer.cs">
       <DependentUpon>HRD.cs</DependentUpon>
     </Compile>
-    <Compile Include="HRD\HRD_Payroll.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="HRD\HRD_Payroll.Designer.cs">
-      <DependentUpon>HRD_Payroll.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HRD\HRD_People.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="HRD\HRD_People.Designer.cs">
-      <DependentUpon>HRD_People.cs</DependentUpon>
-    </Compile>
     <Compile Include="HRD\HRD_Recruitment Task.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -149,18 +137,6 @@
     <Compile Include="Laundry\Laundry.Designer.cs">
       <DependentUpon>Laundry.cs</DependentUpon>
     </Compile>
-    <Compile Include="Laundry\Laundry_Detail.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Laundry\Laundry_Detail.Designer.cs">
-      <DependentUpon>Laundry_Detail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Laundry\Laundry_Order.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Laundry\Laundry_Order.Designer.cs">
-      <DependentUpon>Laundry_Order.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,18 +156,6 @@
     </Compile>
     <Compile Include="Receptionist\Receptionist.Designer.cs">
       <DependentUpon>Receptionist.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Receptionist\Receptionist_Booking.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Receptionist\Receptionist_Booking.Designer.cs">
-      <DependentUpon>Receptionist_Booking.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Receptionist\Receptionist_List.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Receptionist\Receptionist_List.Designer.cs">
-      <DependentUpon>Receptionist_List.cs</DependentUpon>
     </Compile>
     <Compile Include="Restoran\Restoran.cs">
       <SubType>Form</SubType>
@@ -223,6 +187,12 @@
     <Compile Include="Self_Booking\SB_3.Designer.cs">
       <DependentUpon>SB_3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Self_Booking\SB_RoomList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Self_Booking\SB_RoomList.Designer.cs">
+      <DependentUpon>SB_RoomList.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Dapur\Dapur.resx">
       <DependentUpon>Dapur.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,12 +201,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HRD\HRD.resx">
       <DependentUpon>HRD.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HRD\HRD_Payroll.resx">
-      <DependentUpon>HRD_Payroll.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HRD\HRD_People.resx">
-      <DependentUpon>HRD_People.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HRD\HRD_Recruitment Task.resx">
       <DependentUpon>HRD_Recruitment Task.cs</DependentUpon>
@@ -266,12 +230,6 @@
     <EmbeddedResource Include="Laundry\Laundry.resx">
       <DependentUpon>Laundry.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Laundry\Laundry_Detail.resx">
-      <DependentUpon>Laundry_Detail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Laundry\Laundry_Order.resx">
-      <DependentUpon>Laundry_Order.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -291,12 +249,6 @@
     <EmbeddedResource Include="Receptionist\Receptionist.resx">
       <DependentUpon>Receptionist.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Receptionist\Receptionist_Booking.resx">
-      <DependentUpon>Receptionist_Booking.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Receptionist\Receptionist_List.resx">
-      <DependentUpon>Receptionist_List.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Restoran\Restoran.resx">
       <DependentUpon>Restoran.cs</DependentUpon>
     </EmbeddedResource>
@@ -311,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Self_Booking\SB_3.resx">
       <DependentUpon>SB_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Self_Booking\SB_RoomList.resx">
+      <DependentUpon>SB_RoomList.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
