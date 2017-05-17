@@ -16,5 +16,13 @@ namespace proyek_pcs_hotel
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tabPage1.Hide();
+            tabPage2.Show();
+            tabControl1.SelectedIndex = (tabControl1.SelectedIndex + 1 < tabControl1.TabCount) ?
+                             tabControl1.SelectedIndex + 1 : tabControl1.SelectedIndex;
+        }
     }
 }
