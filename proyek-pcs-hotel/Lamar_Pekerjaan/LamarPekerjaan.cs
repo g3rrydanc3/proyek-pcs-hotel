@@ -24,5 +24,28 @@ namespace proyek_pcs_hotel
             tabControl1.SelectedIndex = (tabControl1.SelectedIndex + 1 < tabControl1.TabCount) ?
                              tabControl1.SelectedIndex + 1 : tabControl1.SelectedIndex;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.InitialDirectory = Application.StartupPath;
+            openFileDialog1.FileName = "";
+            openFileDialog1.Title = "Open File JPG, JPEG, PNG";
+            openFileDialog1.Filter = "JPG, JPEG, PNG files|*.JPG|*.JPEG|*.PNG";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                String filename = openFileDialog1.FileName;
+                textBox2.Text = filename;
+                pictureBox1.ImageLocation = filename;
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            tabPage2.Hide();
+            tabPage1.Show();
+            tabControl1.SelectedIndex = (tabControl1.SelectedIndex - 1 < tabControl1.TabCount) ?
+                             tabControl1.SelectedIndex - 1 : tabControl1.SelectedIndex;
+        }
     }
 }
