@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using IniParser;
+using IniParser.Model;
+using Oracle.ManagedDataAccess.Client;
+//using Oracle.DataAccess.Client;
 
 namespace proyek_pcs_hotel
 {
@@ -16,15 +20,36 @@ namespace proyek_pcs_hotel
         {
             InitializeComponent();
         }
+        OracleConnection conn;
+
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                var parser = new FileIniDataParser();
+                IniData data = parser.ReadFile("_config.ini");
+                string connectionString = "Data source=" + data["oracle"]["datasource"] + ";User ID=" + data["oracle"]["username"] + ";Password=" + data["oracle"]["password"];
+                conn = new OracleConnection(connectionString);
+                conn.Open();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                
+                throw ex;
+            }
+        }
 
         private void openForm(String form)
         {
             Login f = new Login();
             f.Closed += (s, args) => this.Close();
             f.mode = form;
+            f.conn = conn;
             this.Hide();
             f.Show();
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
