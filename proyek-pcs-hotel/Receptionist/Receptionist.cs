@@ -56,12 +56,13 @@ namespace proyek_pcs_hotel
         {
             try
             {
-                OracleDataAdapter adap = new OracleDataAdapter("select kamar.kode_kamar, tipe_kamar, harga_kamar from kamar, hotel_djual where tipe_kamar = '" + comboBox1.Text + "' and kamar.kode_kamar = '" + textBox1.Text + "' and kamar.kode_kamar = hotel_djual.kode_kamar and to_date(sysdate,'DD/MM/YYYY') < tgl_in and to_date(sysdate,'DD/MM/YYYY') >= tgl_out", conn);
+                OracleDataAdapter adap = new OracleDataAdapter("select distinct kamar.kode_kamar, tipe_kamar, harga_kamar from kamar, hotel_djual where tipe_kamar = '" + comboBox1.Text + "' and kamar.kode_kamar = '" + textBox1.Text + "' and kamar.kode_kamar = hotel_djual.kode_kamar and (sysdate not between tgl_in and tgl_out)", conn);
                 DataTable dt = new DataTable();
                 adap.Fill(dt);
                 dataGridView1.Columns.Clear();
                 dataGridView1.DataSource = dt;
                 comboBox1.SelectedIndex = -1;
+                textBox1.Text = "";
             }
             catch (Exception ex)
             {
