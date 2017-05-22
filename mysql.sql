@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `hotel_djual` (
   `TGL_OUT` DATE NOT NULL,
   INDEX `FK_NOTA_HOTEL` (`NOTA_HOTEL` ASC),
   INDEX `FK_KODE_KAMAR` (`KODE_KAMAR` ASC),
-  PRIMARY KEY (`NOTA_HOTEL`, `KODE_KAMAR`),
+  PRIMARY KEY (`NOTA_HOTEL`),
   CONSTRAINT `FK_KODE_KAMAR`
     FOREIGN KEY (`KODE_KAMAR`)
     REFERENCES `kamar` (`KODE_KAMAR`),
@@ -139,7 +139,9 @@ CREATE TABLE IF NOT EXISTS `pegawai` (
   `KODE_PEG` INT NOT NULL,
   `KODE_DIVISI` INT NOT NULL,
   `NAMA_PEG` VARCHAR(50) NOT NULL,
-  PRIMARY KEY (`KODE_PEG`, `KODE_DIVISI`),
+  `USERNAME` VARCHAR(45) NOT NULL,
+  `PASSWORD` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`KODE_PEG`),
   INDEX `FK_KODE_DIVISI` (`KODE_DIVISI` ASC),
   CONSTRAINT `FK_KODE_DIVISI`
     FOREIGN KEY (`KODE_DIVISI`)
@@ -236,7 +238,39 @@ CREATE TABLE IF NOT EXISTS `pelamar` (
   `ALAMAT_PELAMAR` VARCHAR(45) NOT NULL,
   `TELEPON_PELAMAR` INT NOT NULL,
   `EMAIL_PELAMAR` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`KODE_PELAMAR`))
+  `KODE_DIVISI` INT NOT NULL,
+  PRIMARY KEY (`KODE_PELAMAR`),
+  INDEX `fk_pelamar_pegawai_divisi1_idx` (`KODE_DIVISI` ASC),
+  CONSTRAINT `fk_pelamar_pegawai_divisi1`
+    FOREIGN KEY (`KODE_DIVISI`)
+    REFERENCES `pegawai_divisi` (`KODE_DIVISI`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `message`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `message` (
+  `KODE_MESSAGE` INT NOT NULL,
+  `KIRIM_KODE_DIVISI` INT NOT NULL,
+  `TEIRMA_KODE_DIVISI` INT NOT NULL,
+  `WAKTU` DATETIME NULL,
+  `PESAN` VARCHAR(45) NULL,
+  PRIMARY KEY (`KODE_MESSAGE`),
+  INDEX `fk_message_pegawai_divisi1_idx` (`KIRIM_KODE_DIVISI` ASC),
+  INDEX `fk_message_pegawai_divisi2_idx` (`TEIRMA_KODE_DIVISI` ASC),
+  CONSTRAINT `fk_message_pegawai_divisi1`
+    FOREIGN KEY (`KIRIM_KODE_DIVISI`)
+    REFERENCES `pegawai_divisi` (`KODE_DIVISI`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_message_pegawai_divisi2`
+    FOREIGN KEY (`TEIRMA_KODE_DIVISI`)
+    REFERENCES `pegawai_divisi` (`KODE_DIVISI`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
@@ -347,16 +381,16 @@ COMMIT;
 -- Data for table `pegawai`
 -- -----------------------------------------------------
 START TRANSACTION;
-INSERT INTO `pegawai` (`KODE_PEG`, `KODE_DIVISI`, `NAMA_PEG`) VALUES (1, 1, 'Tukang Receptionist 1');
-INSERT INTO `pegawai` (`KODE_PEG`, `KODE_DIVISI`, `NAMA_PEG`) VALUES (2, 1, 'Tukang Receptionist 2');
-INSERT INTO `pegawai` (`KODE_PEG`, `KODE_DIVISI`, `NAMA_PEG`) VALUES (3, 2, 'Tukang Restoran 1');
-INSERT INTO `pegawai` (`KODE_PEG`, `KODE_DIVISI`, `NAMA_PEG`) VALUES (4, 2, 'Tukang Restoran 2');
-INSERT INTO `pegawai` (`KODE_PEG`, `KODE_DIVISI`, `NAMA_PEG`) VALUES (5, 3, 'Tukang Dapur 1');
-INSERT INTO `pegawai` (`KODE_PEG`, `KODE_DIVISI`, `NAMA_PEG`) VALUES (6, 3, 'Tukang Dapur 2');
-INSERT INTO `pegawai` (`KODE_PEG`, `KODE_DIVISI`, `NAMA_PEG`) VALUES (7, 4, 'Tukang Laundry 1');
-INSERT INTO `pegawai` (`KODE_PEG`, `KODE_DIVISI`, `NAMA_PEG`) VALUES (8, 4, 'Tukang Laundry 2');
-INSERT INTO `pegawai` (`KODE_PEG`, `KODE_DIVISI`, `NAMA_PEG`) VALUES (9, 5, 'Tukang HRD 1');
-INSERT INTO `pegawai` (`KODE_PEG`, `KODE_DIVISI`, `NAMA_PEG`) VALUES (10, 5, 'Tukang HRD 2');
+INSERT INTO `pegawai` (`KODE_PEG`, `KODE_DIVISI`, `NAMA_PEG`, `USERNAME`, `PASSWORD`) VALUES (1, 1, 'Tukang Receptionist 1', 'receptionist1', 'pass');
+INSERT INTO `pegawai` (`KODE_PEG`, `KODE_DIVISI`, `NAMA_PEG`, `USERNAME`, `PASSWORD`) VALUES (2, 1, 'Tukang Receptionist 2', 'receptionist2', 'pass');
+INSERT INTO `pegawai` (`KODE_PEG`, `KODE_DIVISI`, `NAMA_PEG`, `USERNAME`, `PASSWORD`) VALUES (3, 2, 'Tukang Restoran 1', 'restoran1', 'pass');
+INSERT INTO `pegawai` (`KODE_PEG`, `KODE_DIVISI`, `NAMA_PEG`, `USERNAME`, `PASSWORD`) VALUES (4, 2, 'Tukang Restoran 2', 'restoran2', 'pass');
+INSERT INTO `pegawai` (`KODE_PEG`, `KODE_DIVISI`, `NAMA_PEG`, `USERNAME`, `PASSWORD`) VALUES (5, 3, 'Tukang Dapur 1', 'dapur1', 'pass');
+INSERT INTO `pegawai` (`KODE_PEG`, `KODE_DIVISI`, `NAMA_PEG`, `USERNAME`, `PASSWORD`) VALUES (6, 3, 'Tukang Dapur 2', 'dapur2', 'pass');
+INSERT INTO `pegawai` (`KODE_PEG`, `KODE_DIVISI`, `NAMA_PEG`, `USERNAME`, `PASSWORD`) VALUES (7, 4, 'Tukang Laundry 1', 'laundry1', 'pass');
+INSERT INTO `pegawai` (`KODE_PEG`, `KODE_DIVISI`, `NAMA_PEG`, `USERNAME`, `PASSWORD`) VALUES (8, 4, 'Tukang Laundry 2', 'laundry2', 'pass');
+INSERT INTO `pegawai` (`KODE_PEG`, `KODE_DIVISI`, `NAMA_PEG`, `USERNAME`, `PASSWORD`) VALUES (9, 5, 'Tukang HRD 1', 'hrd1', 'pass');
+INSERT INTO `pegawai` (`KODE_PEG`, `KODE_DIVISI`, `NAMA_PEG`, `USERNAME`, `PASSWORD`) VALUES (10, 5, 'Tukang HRD 2', 'hrd2', 'pass');
 
 COMMIT;
 

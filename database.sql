@@ -127,6 +127,8 @@ CREATE TABLE pegawai (
   KODE_PEG NUMBER NOT NULL,
   KODE_DIVISI NUMBER NOT NULL,
   NAMA_PEG VARCHAR2(50) NOT NULL,
+  USERNAME VARCHAR2(45) NOT NULL,
+  PASSWORD VARCHAR2(45) NOT NULL,
   PRIMARY KEY (KODE_PEG)
  ,
   CONSTRAINT FK_KODE_DIVISI
@@ -312,16 +314,16 @@ INSERT INTO pegawai_divisi (KODE_DIVISI, NAMA_DIVISI, GAJI_DIVISI) VALUES (5, 'H
 -- -----------------------------------------------------
 -- Data for table `pegawai`
 -- -----------------------------------------------------
-INSERT INTO pegawai (KODE_PEG, KODE_DIVISI, NAMA_PEG) VALUES (1, 1, 'Tukang Receptionist 1');
-INSERT INTO pegawai (KODE_PEG, KODE_DIVISI, NAMA_PEG) VALUES (2, 1, 'Tukang Receptionist 2');
-INSERT INTO pegawai (KODE_PEG, KODE_DIVISI, NAMA_PEG) VALUES (3, 2, 'Tukang Restoran 1');
-INSERT INTO pegawai (KODE_PEG, KODE_DIVISI, NAMA_PEG) VALUES (4, 2, 'Tukang Restoran 2');
-INSERT INTO pegawai (KODE_PEG, KODE_DIVISI, NAMA_PEG) VALUES (5, 3, 'Tukang Dapur 1');
-INSERT INTO pegawai (KODE_PEG, KODE_DIVISI, NAMA_PEG) VALUES (6, 3, 'Tukang Dapur 2');
-INSERT INTO pegawai (KODE_PEG, KODE_DIVISI, NAMA_PEG) VALUES (7, 4, 'Tukang Laundry 1');
-INSERT INTO pegawai (KODE_PEG, KODE_DIVISI, NAMA_PEG) VALUES (8, 4, 'Tukang Laundry 2');
-INSERT INTO pegawai (KODE_PEG, KODE_DIVISI, NAMA_PEG) VALUES (9, 5, 'Tukang HRD 1');
-INSERT INTO pegawai (KODE_PEG, KODE_DIVISI, NAMA_PEG) VALUES (10, 5, 'Tukang HRD 2');
+INSERT INTO pegawai (KODE_PEG, KODE_DIVISI, NAMA_PEG, USERNAME, PASSWORD) VALUES (1, 1, 'Tukang Receptionist 1', 'receptionist1', 'pass');
+INSERT INTO pegawai (KODE_PEG, KODE_DIVISI, NAMA_PEG, USERNAME, PASSWORD) VALUES (2, 1, 'Tukang Receptionist 2', 'receptionist2', 'pass');
+INSERT INTO pegawai (KODE_PEG, KODE_DIVISI, NAMA_PEG, USERNAME, PASSWORD) VALUES (3, 2, 'Tukang Restoran 1', 'restoran1', 'pass');
+INSERT INTO pegawai (KODE_PEG, KODE_DIVISI, NAMA_PEG, USERNAME, PASSWORD) VALUES (4, 2, 'Tukang Restoran 2', 'restoran2', 'pass');
+INSERT INTO pegawai (KODE_PEG, KODE_DIVISI, NAMA_PEG, USERNAME, PASSWORD) VALUES (5, 3, 'Tukang Dapur 1', 'dapur1', 'pass');
+INSERT INTO pegawai (KODE_PEG, KODE_DIVISI, NAMA_PEG, USERNAME, PASSWORD) VALUES (6, 3, 'Tukang Dapur 2', 'dapur2', 'pass');
+INSERT INTO pegawai (KODE_PEG, KODE_DIVISI, NAMA_PEG, USERNAME, PASSWORD) VALUES (7, 4, 'Tukang Laundry 1', 'laundry1', 'pass');
+INSERT INTO pegawai (KODE_PEG, KODE_DIVISI, NAMA_PEG, USERNAME, PASSWORD) VALUES (8, 4, 'Tukang Laundry 2', 'laundry2', 'pass');
+INSERT INTO pegawai (KODE_PEG, KODE_DIVISI, NAMA_PEG, USERNAME, PASSWORD) VALUES (9, 5, 'Tukang HRD 1', 'hrd1', 'pass');
+INSERT INTO pegawai (KODE_PEG, KODE_DIVISI, NAMA_PEG, USERNAME, PASSWORD) VALUES (10, 5, 'Tukang HRD 2', 'hrd2', 'pass');
 
 -- -----------------------------------------------------
 -- Data for table `penggajian`
