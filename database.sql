@@ -170,13 +170,13 @@ CREATE TABLE restoran_menu (
 CREATE TABLE restoran_hjual (
   NOTA_RESTO NUMBER NOT NULL,
   TGL_RESTO TIMESTAMP(0) NOT NULL,
-  KODE_CUST NUMBER NULL,
+  KODE_KAMAR NUMBER NULL,
   MEJA NUMBER NULL,
   PRIMARY KEY (NOTA_RESTO)
  ,
-  CONSTRAINT fk_restoran_hjual_customer1
-    FOREIGN KEY (KODE_CUST)
-    REFERENCES customer (KODE_CUST)
+  CONSTRAINT fk_restoran_hjual_kamar1
+    FOREIGN KEY (KODE_KAMAR)
+    REFERENCES kamar (KODE_KAMAR)
    )
 ;
 
@@ -345,8 +345,8 @@ INSERT INTO restoran_menu (KODE_MENU, JENIS_MENU, NAMA_MENU, HARGA_MENU, SOLDOUT
 -- -----------------------------------------------------
 -- Data for table `restoran_hjual`
 -- -----------------------------------------------------
-INSERT INTO restoran_hjual (NOTA_RESTO, TGL_RESTO, KODE_CUST) VALUES (1, to_date('2017-05-20', 'YYYY-MM-DD'), 1);
-INSERT INTO restoran_hjual (NOTA_RESTO, TGL_RESTO, KODE_CUST) VALUES (2, to_date('2017-05-20', 'YYYY-MM-DD'), 2);
+INSERT INTO restoran_hjual (NOTA_RESTO, TGL_RESTO, KODE_CUST) VALUES (1, to_date('2017-05-20', 'YYYY-MM-DD'), 101);
+INSERT INTO restoran_hjual (NOTA_RESTO, TGL_RESTO, KODE_CUST) VALUES (2, to_date('2017-05-20', 'YYYY-MM-DD'), null);
 
 -- -----------------------------------------------------
 -- Data for table `restoran_djual`

@@ -189,13 +189,13 @@ DEFAULT CHARACTER SET = latin1;
 CREATE TABLE IF NOT EXISTS `restoran_hjual` (
   `NOTA_RESTO` INT NOT NULL,
   `TGL_RESTO` DATETIME NOT NULL,
-  `KODE_CUST` INT NULL,
+  `KODE_KAMAR` INT NULL,
   `MEJA` INT NULL,
   PRIMARY KEY (`NOTA_RESTO`),
-  INDEX `fk_restoran_hjual_customer1_idx` (`KODE_CUST` ASC),
-  CONSTRAINT `fk_restoran_hjual_customer1`
-    FOREIGN KEY (`KODE_CUST`)
-    REFERENCES `customer` (`KODE_CUST`)
+  INDEX `fk_restoran_hjual_kamar1_idx` (`KODE_KAMAR` ASC),
+  CONSTRAINT `fk_restoran_hjual_kamar1`
+    FOREIGN KEY (`KODE_KAMAR`)
+    REFERENCES `kamar` (`KODE_KAMAR`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -424,8 +424,8 @@ COMMIT;
 -- Data for table `restoran_hjual`
 -- -----------------------------------------------------
 START TRANSACTION;
-INSERT INTO `restoran_hjual` (`NOTA_RESTO`, `TGL_RESTO`, `KODE_CUST`, `MEJA`) VALUES (1, '2017-05-20', 1, NULL);
-INSERT INTO `restoran_hjual` (`NOTA_RESTO`, `TGL_RESTO`, `KODE_CUST`, `MEJA`) VALUES (2, '2017-05-20', 2, NULL);
+INSERT INTO `restoran_hjual` (`NOTA_RESTO`, `TGL_RESTO`, `KODE_KAMAR`, `MEJA`) VALUES (1, '2017-05-20', NULL, NULL);
+INSERT INTO `restoran_hjual` (`NOTA_RESTO`, `TGL_RESTO`, `KODE_KAMAR`, `MEJA`) VALUES (2, '2017-05-20', NULL, NULL);
 
 COMMIT;
 
