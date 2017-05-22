@@ -20,125 +20,139 @@ namespace proyek_pcs_hotel
         public string mode;
         public OracleConnection conn;
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buka(bool ada)
         {
-            //if (textBox1.Text.Trim().ToLower().Count() == 0 && maskedTextBox1.Text.Count() == 0)
-            if (true)
+            if (mode == "Receptionist")
             {
-                if (mode == "Receptionist")
+                if (ada)
                 {
-                    if (true)//CEK USERNAME
-                    {
-                        Receptionist f = new Receptionist();
-                        f.conn = this.conn;
-                        f.Closed += (s, args) => this.Close();
-                        this.Hide();
-                        f.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Username / Password Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    } 
+                    Receptionist f = new Receptionist();
+                    f.conn = conn;
+                    f.Closed += (s, args) => this.Close();
+                    this.Hide();
+                    f.Show();
                 }
-                else if (mode == "Restoran")
+                else
                 {
-                    if (true)//CEK USERNAME
-                    {
-                        Restoran f = new Restoran();
-                        f.Closed += (s, args) => this.Close();
-                        this.Hide();
-                        f.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Username / Password Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                else if (mode == "Dapur")
-                {
-                    if (true)//CEK USERNAME
-                    {
-                        Dapur f = new Dapur();
-                        f.Closed += (s, args) => this.Close();
-                        this.Hide();
-                        f.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Username / Password Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                else if (mode == "Laundry")
-                {
-                    if (true)//CEK USERNAME
-                    {
-                        Laundry f = new Laundry();
-                        f.Closed += (s, args) => this.Close();
-                        this.Hide();
-                        f.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Username / Password Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                else if (mode == "Self_Booking")
-                {
-                    if (true)//CEK USERNAME
-                    {
-                        SB f = new SB();
-                        f.Closed += (s, args) => this.Close();
-                        this.Hide();
-                        f.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Username / Password Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                else if (mode == "HRD")
-                {
-                    if (true)//CEK USERNAME
-                    {
-                        HRD f = new HRD();
-                        f.Closed += (s, args) => this.Close();
-                        this.Hide();
-                        f.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Username / Password Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                else if (mode == "Laporan")
-                {
-                    if (true)//CEK USERNAME
-                    {
-                        Laporan f = new Laporan();
-                        f.Closed += (s, args) => this.Close();
-                        this.Hide();
-                        f.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Username / Password Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                else if (mode == "Lamar")
-                {
-                    if (true)//CEK USERNAME
-                    {
-                        LamarPekerjaan f = new LamarPekerjaan();
-                        f.Closed += (s, args) => this.Close();
-                        this.Hide();
-                        f.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Username / Password Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    MessageBox.Show("Username / Password Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            else if (mode == "Restoran")
+            {
+                if (ada)
+                {
+                    Restoran f = new Restoran();
+                    f.conn = conn;
+                    f.Closed += (s, args) => this.Close();
+                    this.Hide();
+                    f.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Username / Password Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else if (mode == "Dapur")
+            {
+                if (ada)
+                {
+                    Dapur f = new Dapur();
+                    //f.conn = conn;
+                    f.Closed += (s, args) => this.Close();
+                    this.Hide();
+                    f.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Username / Password Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else if (mode == "Laundry")
+            {
+                if (ada)
+                {
+                    Laundry f = new Laundry();
+                    //f.conn = conn;
+                    f.Closed += (s, args) => this.Close();
+                    this.Hide();
+                    f.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Username / Password Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else if (mode == "HRD")
+            {
+                if (ada)
+                {
+                    HRD f = new HRD();
+                    //f.conn = conn;
+                    f.Closed += (s, args) => this.Close();
+                    this.Hide();
+                    f.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Username / Password Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else if (mode == "Laporan")
+            {
+                if (textBox1.Text == "admin" && textBox2.Text == "admin")
+                {
+                    Laporan f = new Laporan();
+                    //f.conn = conn;
+                    f.Closed += (s, args) => this.Close();
+                    this.Hide();
+                    f.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Username / Password Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text.Trim().ToLower().Count() != 0 && textBox2.Text.Count() != 0)
+            {
+                textBox1.Text = textBox1.Text.Trim();
+                textBox2.Text = textBox2.Text.TrimStart().TrimEnd();
+
+                OracleCommand cmd = new OracleCommand("select count(*) from pegawai p, pegawai_divisi d where p.kode_divisi = d.kode_divisi and p.username = :a and p.password = :b and d.nama_divisi = :c", conn);
+                cmd.Parameters.Add(":a", textBox1.Text);
+                cmd.Parameters.Add(":b", textBox2.Text);
+                cmd.Parameters.Add(":c", mode);
+                bool ada = Convert.ToBoolean(Int32.Parse(cmd.ExecuteScalar().ToString()));
+
+                buka(ada);
+            }
+        }
+
+        private void Login_Shown(object sender, EventArgs e)
+        {
+            if (mode == "Self_Booking")
+            {
+                SB f = new SB();
+                //f.conn = conn;
+                f.Closed += (s, args) => this.Close();
+                this.Hide();
+                f.Show();
+            }
+            else if (mode == "Lamar")
+            {
+                LamarPekerjaan f = new LamarPekerjaan();
+                f.conn = conn;
+                f.Closed += (s, args) => this.Close();
+                this.Hide();
+                f.Show();
+            }
+            /////////////////////
+            //JANGAN LUPA DELETE
+            //////////////////////
+            buka(true);
         }
     }
 }
