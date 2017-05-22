@@ -190,6 +190,7 @@ CREATE TABLE IF NOT EXISTS `restoran_hjual` (
   `NOTA_RESTO` INT NOT NULL,
   `TGL_RESTO` DATETIME NOT NULL,
   `KODE_CUST` INT NULL,
+  `MEJA` INT NULL,
   PRIMARY KEY (`NOTA_RESTO`),
   INDEX `fk_restoran_hjual_customer1_idx` (`KODE_CUST` ASC),
   CONSTRAINT `fk_restoran_hjual_customer1`
@@ -423,8 +424,8 @@ COMMIT;
 -- Data for table `restoran_hjual`
 -- -----------------------------------------------------
 START TRANSACTION;
-INSERT INTO `restoran_hjual` (`NOTA_RESTO`, `TGL_RESTO`, `KODE_CUST`) VALUES (1, '2017-05-20', 1);
-INSERT INTO `restoran_hjual` (`NOTA_RESTO`, `TGL_RESTO`, `KODE_CUST`) VALUES (2, '2017-05-20', 2);
+INSERT INTO `restoran_hjual` (`NOTA_RESTO`, `TGL_RESTO`, `KODE_CUST`, `MEJA`) VALUES (1, '2017-05-20', 1, NULL);
+INSERT INTO `restoran_hjual` (`NOTA_RESTO`, `TGL_RESTO`, `KODE_CUST`, `MEJA`) VALUES (2, '2017-05-20', 2, NULL);
 
 COMMIT;
 
