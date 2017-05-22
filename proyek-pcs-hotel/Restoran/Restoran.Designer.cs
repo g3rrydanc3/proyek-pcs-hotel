@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewFood = new System.Windows.Forms.DataGridView();
+            this.dataGridViewDrink = new System.Windows.Forms.DataGridView();
             this.buttonDineIn = new System.Windows.Forms.Button();
             this.buttonTakeAway = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -37,64 +37,84 @@
             this.buttonDelivery = new System.Windows.Forms.Button();
             this.buttonOrderDrink = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDrink = new System.Windows.Forms.NumericUpDown();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownFood = new System.Windows.Forms.NumericUpDown();
             this.buttonOrderFood = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.messageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonDelete = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFood)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDrink)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrink)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFood)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView2
+            // dataGridViewFood
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 24);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(187, 151);
-            this.dataGridView2.TabIndex = 4;
+            this.dataGridViewFood.AllowUserToAddRows = false;
+            this.dataGridViewFood.AllowUserToDeleteRows = false;
+            this.dataGridViewFood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewFood.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewFood.Location = new System.Drawing.Point(3, 24);
+            this.dataGridViewFood.MultiSelect = false;
+            this.dataGridViewFood.Name = "dataGridViewFood";
+            this.dataGridViewFood.ReadOnly = true;
+            this.dataGridViewFood.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewFood.Size = new System.Drawing.Size(187, 141);
+            this.dataGridViewFood.TabIndex = 4;
+            this.dataGridViewFood.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewFood_CellClick);
             // 
-            // dataGridView1
+            // dataGridViewDrink
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 289);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(187, 151);
-            this.dataGridView1.TabIndex = 3;
+            this.dataGridViewDrink.AllowUserToAddRows = false;
+            this.dataGridViewDrink.AllowUserToDeleteRows = false;
+            this.dataGridViewDrink.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDrink.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewDrink.Location = new System.Drawing.Point(3, 278);
+            this.dataGridViewDrink.MultiSelect = false;
+            this.dataGridViewDrink.Name = "dataGridViewDrink";
+            this.dataGridViewDrink.ReadOnly = true;
+            this.tableLayoutPanel1.SetRowSpan(this.dataGridViewDrink, 2);
+            this.dataGridViewDrink.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewDrink.Size = new System.Drawing.Size(187, 163);
+            this.dataGridViewDrink.TabIndex = 3;
+            this.dataGridViewDrink.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDrink_CellClick);
             // 
             // buttonDineIn
             // 
             this.buttonDineIn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonDineIn.Location = new System.Drawing.Point(203, 443);
+            this.buttonDineIn.Location = new System.Drawing.Point(203, 444);
             this.buttonDineIn.Margin = new System.Windows.Forms.Padding(0);
             this.buttonDineIn.Name = "buttonDineIn";
             this.tableLayoutPanel1.SetRowSpan(this.buttonDineIn, 3);
-            this.buttonDineIn.Size = new System.Drawing.Size(193, 89);
+            this.buttonDineIn.Size = new System.Drawing.Size(193, 88);
             this.buttonDineIn.TabIndex = 0;
             this.buttonDineIn.Text = "Dine In";
             this.buttonDineIn.UseVisualStyleBackColor = true;
+            this.buttonDineIn.Click += new System.EventHandler(this.buttonDineIn_Click);
             // 
             // buttonTakeAway
             // 
             this.buttonTakeAway.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonTakeAway.Location = new System.Drawing.Point(396, 443);
+            this.buttonTakeAway.Location = new System.Drawing.Point(396, 444);
             this.buttonTakeAway.Margin = new System.Windows.Forms.Padding(0);
             this.buttonTakeAway.Name = "buttonTakeAway";
             this.tableLayoutPanel1.SetRowSpan(this.buttonTakeAway, 3);
-            this.buttonTakeAway.Size = new System.Drawing.Size(193, 89);
+            this.buttonTakeAway.Size = new System.Drawing.Size(193, 88);
             this.buttonTakeAway.TabIndex = 1;
             this.buttonTakeAway.Text = "Take Away";
             this.buttonTakeAway.UseVisualStyleBackColor = true;
+            this.buttonTakeAway.Click += new System.EventHandler(this.buttonTakeAway_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -105,33 +125,35 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.03226F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.03226F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.buttonTakeAway, 3, 7);
-            this.tableLayoutPanel1.Controls.Add(this.buttonDelivery, 4, 7);
-            this.tableLayoutPanel1.Controls.Add(this.buttonOrderDrink, 0, 9);
-            this.tableLayoutPanel1.Controls.Add(this.buttonDineIn, 2, 7);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown1, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.dataGridView3, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.buttonTakeAway, 3, 8);
+            this.tableLayoutPanel1.Controls.Add(this.buttonDelivery, 4, 8);
+            this.tableLayoutPanel1.Controls.Add(this.buttonOrderDrink, 0, 10);
+            this.tableLayoutPanel1.Controls.Add(this.buttonDineIn, 2, 8);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.numericUpDownDrink, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.dataGridView3, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown2, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.numericUpDownFood, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.buttonOrderFood, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.dataGridView2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.dataGridViewDrink, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.dataGridViewFood, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.buttonDelete, 4, 7);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 29);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 10;
+            this.tableLayoutPanel1.RowCount = 11;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 41.66806F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.330277F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 41.66806F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.42373F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333611F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.78814F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.78814F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(784, 532);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
@@ -148,78 +170,113 @@
             // buttonDelivery
             // 
             this.buttonDelivery.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonDelivery.Location = new System.Drawing.Point(589, 443);
+            this.buttonDelivery.Location = new System.Drawing.Point(589, 444);
             this.buttonDelivery.Margin = new System.Windows.Forms.Padding(0);
             this.buttonDelivery.Name = "buttonDelivery";
             this.tableLayoutPanel1.SetRowSpan(this.buttonDelivery, 3);
-            this.buttonDelivery.Size = new System.Drawing.Size(195, 89);
+            this.buttonDelivery.Size = new System.Drawing.Size(195, 88);
             this.buttonDelivery.TabIndex = 2;
             this.buttonDelivery.Text = "Delivery To Room";
             this.buttonDelivery.UseVisualStyleBackColor = true;
+            this.buttonDelivery.Click += new System.EventHandler(this.buttonDelivery_Click);
             // 
             // buttonOrderDrink
             // 
             this.buttonOrderDrink.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonOrderDrink.Location = new System.Drawing.Point(3, 502);
+            this.buttonOrderDrink.Enabled = false;
+            this.buttonOrderDrink.Location = new System.Drawing.Point(3, 503);
             this.buttonOrderDrink.Name = "buttonOrderDrink";
-            this.buttonOrderDrink.Size = new System.Drawing.Size(187, 27);
+            this.buttonOrderDrink.Size = new System.Drawing.Size(187, 26);
             this.buttonOrderDrink.TabIndex = 10;
             this.buttonOrderDrink.Text = "Order Drink";
             this.buttonOrderDrink.UseVisualStyleBackColor = true;
+            this.buttonOrderDrink.Click += new System.EventHandler(this.buttonOrderDrink_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(3, 443);
+            this.label3.Location = new System.Drawing.Point(3, 444);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(187, 21);
             this.label3.TabIndex = 8;
             this.label3.Text = "Quantity Drink";
             // 
-            // numericUpDown1
+            // numericUpDownDrink
             // 
-            this.numericUpDown1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown1.Location = new System.Drawing.Point(3, 467);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(187, 29);
-            this.numericUpDown1.TabIndex = 9;
+            this.numericUpDownDrink.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numericUpDownDrink.Location = new System.Drawing.Point(3, 468);
+            this.numericUpDownDrink.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownDrink.Name = "numericUpDownDrink";
+            this.numericUpDownDrink.Size = new System.Drawing.Size(187, 29);
+            this.numericUpDownDrink.TabIndex = 9;
+            this.numericUpDownDrink.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // dataGridView3
             // 
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.AllowUserToDeleteRows = false;
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
             this.tableLayoutPanel1.SetColumnSpan(this.dataGridView3, 3);
             this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView3.Location = new System.Drawing.Point(206, 24);
+            this.dataGridView3.Location = new System.Drawing.Point(206, 3);
             this.dataGridView3.Name = "dataGridView3";
-            this.tableLayoutPanel1.SetRowSpan(this.dataGridView3, 6);
-            this.dataGridView3.Size = new System.Drawing.Size(575, 416);
+            this.tableLayoutPanel1.SetRowSpan(this.dataGridView3, 7);
+            this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView3.Size = new System.Drawing.Size(575, 386);
             this.dataGridView3.TabIndex = 7;
+            this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Location = new System.Drawing.Point(3, 178);
+            this.label4.Location = new System.Drawing.Point(3, 168);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(187, 21);
             this.label4.TabIndex = 11;
             this.label4.Text = "Quantity Food";
             // 
-            // numericUpDown2
+            // numericUpDownFood
             // 
-            this.numericUpDown2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown2.Location = new System.Drawing.Point(3, 202);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(187, 29);
-            this.numericUpDown2.TabIndex = 12;
+            this.numericUpDownFood.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numericUpDownFood.Location = new System.Drawing.Point(3, 192);
+            this.numericUpDownFood.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownFood.Name = "numericUpDownFood";
+            this.numericUpDownFood.Size = new System.Drawing.Size(187, 29);
+            this.numericUpDownFood.TabIndex = 12;
+            this.numericUpDownFood.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // buttonOrderFood
             // 
             this.buttonOrderFood.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonOrderFood.Location = new System.Drawing.Point(3, 237);
+            this.buttonOrderFood.Enabled = false;
+            this.buttonOrderFood.Location = new System.Drawing.Point(3, 227);
             this.buttonOrderFood.Name = "buttonOrderFood";
-            this.buttonOrderFood.Size = new System.Drawing.Size(187, 25);
+            this.buttonOrderFood.Size = new System.Drawing.Size(187, 24);
             this.buttonOrderFood.TabIndex = 13;
             this.buttonOrderFood.Text = "Order Food";
             this.buttonOrderFood.UseVisualStyleBackColor = true;
@@ -229,7 +286,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(3, 265);
+            this.label2.Location = new System.Drawing.Point(3, 254);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(187, 21);
             this.label2.TabIndex = 6;
@@ -252,6 +309,45 @@
             this.messageToolStripMenuItem.Size = new System.Drawing.Size(83, 25);
             this.messageToolStripMenuItem.Text = "Message";
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "No";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 56;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Jenis";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 69;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Menu";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 75;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Q";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 47;
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonDelete.Enabled = false;
+            this.buttonDelete.Location = new System.Drawing.Point(592, 395);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(189, 46);
+            this.buttonDelete.TabIndex = 14;
+            this.buttonDelete.Text = "Delete";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            // 
             // Restoran
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -266,13 +362,14 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Restoran";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Restoran_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFood)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDrink)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrink)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFood)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -282,22 +379,27 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewFood;
+        private System.Windows.Forms.DataGridView dataGridViewDrink;
         private System.Windows.Forms.Button buttonDineIn;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDownDrink;
         private System.Windows.Forms.Button buttonOrderDrink;
         private System.Windows.Forms.Button buttonTakeAway;
         private System.Windows.Forms.Button buttonDelivery;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numericUpDownFood;
         private System.Windows.Forms.Button buttonOrderFood;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem messageToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Button buttonDelete;
     }
 }
