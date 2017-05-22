@@ -45,7 +45,7 @@ namespace proyek_pcs_hotel
             Login f = new Login();
             f.Closed += (s, args) => this.Close();
             f.mode = form;
-            //f.conn = conn;
+            f.conn = conn;
             this.Hide();
             f.Show();
         }
