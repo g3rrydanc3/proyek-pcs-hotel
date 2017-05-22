@@ -223,6 +223,7 @@
             this.buttonOrderFood.TabIndex = 13;
             this.buttonOrderFood.Text = "Order Food";
             this.buttonOrderFood.UseVisualStyleBackColor = true;
+            this.buttonOrderFood.Click += new System.EventHandler(this.buttonOrderFood_Click);
             // 
             // label2
             // 

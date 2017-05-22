@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Oracle.ManagedDataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace proyek_pcs_hotel
 {
     public partial class SB : Form
     {
+        public OracleConnection conn;
         public SB()
         {
             InitializeComponent();

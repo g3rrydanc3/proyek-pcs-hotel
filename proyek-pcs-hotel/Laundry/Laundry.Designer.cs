@@ -129,7 +129,7 @@
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(177, 174);
+            this.label1.Location = new System.Drawing.Point(177, 178);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 39);
@@ -140,7 +140,7 @@
             // 
             this.numericUpDownBerat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.numericUpDownBerat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDownBerat.Location = new System.Drawing.Point(261, 179);
+            this.numericUpDownBerat.Location = new System.Drawing.Point(261, 183);
             this.numericUpDownBerat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numericUpDownBerat.Name = "numericUpDownBerat";
             this.numericUpDownBerat.Size = new System.Drawing.Size(296, 29);
@@ -151,7 +151,7 @@
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(177, 213);
+            this.label3.Location = new System.Drawing.Point(177, 217);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 35);
@@ -163,7 +163,7 @@
             this.radioButtonCuciBasah.AutoSize = true;
             this.radioButtonCuciBasah.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radioButtonCuciBasah.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonCuciBasah.Location = new System.Drawing.Point(261, 218);
+            this.radioButtonCuciBasah.Location = new System.Drawing.Point(261, 222);
             this.radioButtonCuciBasah.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radioButtonCuciBasah.Name = "radioButtonCuciBasah";
             this.radioButtonCuciBasah.Size = new System.Drawing.Size(296, 25);
@@ -177,7 +177,7 @@
             this.radioButtonCuciKering.AutoSize = true;
             this.radioButtonCuciKering.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radioButtonCuciKering.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonCuciKering.Location = new System.Drawing.Point(261, 253);
+            this.radioButtonCuciKering.Location = new System.Drawing.Point(261, 257);
             this.radioButtonCuciKering.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radioButtonCuciKering.Name = "radioButtonCuciKering";
             this.radioButtonCuciKering.Size = new System.Drawing.Size(296, 25);
@@ -191,7 +191,7 @@
             this.radioButtonSetrika.AutoSize = true;
             this.radioButtonSetrika.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radioButtonSetrika.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonSetrika.Location = new System.Drawing.Point(261, 288);
+            this.radioButtonSetrika.Location = new System.Drawing.Point(261, 292);
             this.radioButtonSetrika.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radioButtonSetrika.Name = "radioButtonSetrika";
             this.radioButtonSetrika.Size = new System.Drawing.Size(296, 25);
@@ -205,7 +205,7 @@
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(565, 174);
+            this.label2.Location = new System.Drawing.Point(565, 178);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(27, 39);
@@ -216,22 +216,23 @@
             // 
             this.buttonBerat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonBerat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBerat.Location = new System.Drawing.Point(261, 323);
+            this.buttonBerat.Location = new System.Drawing.Point(261, 327);
             this.buttonBerat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonBerat.Name = "buttonBerat";
             this.buttonBerat.Size = new System.Drawing.Size(296, 66);
             this.buttonBerat.TabIndex = 8;
             this.buttonBerat.Text = "Order";
             this.buttonBerat.UseVisualStyleBackColor = true;
+            this.buttonBerat.Click += new System.EventHandler(this.buttonBerat_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Location = new System.Drawing.Point(177, 143);
+            this.label5.Location = new System.Drawing.Point(177, 139);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 31);
+            this.label5.Size = new System.Drawing.Size(55, 39);
             this.label5.TabIndex = 9;
             this.label5.Text = "Kamar";
             // 
@@ -241,7 +242,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.label4, 4);
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(177, 97);
+            this.label4.Location = new System.Drawing.Point(177, 93);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 16);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(415, 30);
@@ -254,7 +255,7 @@
             this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(261, 148);
+            this.comboBox1.Location = new System.Drawing.Point(261, 144);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(296, 29);
@@ -264,10 +265,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Location = new System.Drawing.Point(240, 143);
+            this.label6.Location = new System.Drawing.Point(240, 139);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(13, 31);
+            this.label6.Size = new System.Drawing.Size(13, 39);
             this.label6.TabIndex = 11;
             this.label6.Text = ":";
             // 
@@ -275,7 +276,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Location = new System.Drawing.Point(240, 174);
+            this.label7.Location = new System.Drawing.Point(240, 178);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(13, 39);
@@ -286,7 +287,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Location = new System.Drawing.Point(240, 213);
+            this.label8.Location = new System.Drawing.Point(240, 217);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(13, 35);
@@ -299,7 +300,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 30);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(776, 527);
+            this.tabPage2.Size = new System.Drawing.Size(776, 498);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Detail Laundry";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -317,7 +318,7 @@
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(770, 521);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(770, 492);
             this.tableLayoutPanel2.TabIndex = 4;
             // 
             // dataGridView1
@@ -327,7 +328,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(4, 35);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(762, 481);
+            this.dataGridView1.Size = new System.Drawing.Size(762, 452);
             this.dataGridView1.TabIndex = 0;
             // 
             // label9
@@ -374,6 +375,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Laundry";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Laundry_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);

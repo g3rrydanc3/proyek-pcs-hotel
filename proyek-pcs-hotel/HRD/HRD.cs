@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Oracle.ManagedDataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace proyek_pcs_hotel
 {
     public partial class HRD : Form
     {
+        public OracleConnection conn;
+
         public HRD()
         {
             InitializeComponent();

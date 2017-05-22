@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Oracle.ManagedDataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,20 @@ namespace proyek_pcs_hotel
 {
     public partial class Laundry : Form
     {
+        public OracleConnection conn;
         public Laundry()
         {
             InitializeComponent();
+        }
+
+        private void Laundry_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonBerat_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(374, 309);
             this.Name = "Message";
             this.Text = "Message";
+            this.Load += new System.EventHandler(this.Message_Load);
             this.ResumeLayout(false);
 
         }

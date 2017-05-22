@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using Oracle.ManagedDataAccess.Client;
+using Oracle.ManagedDataAccess.Client;
 
 namespace proyek_pcs_hotel
 {
@@ -18,7 +18,7 @@ namespace proyek_pcs_hotel
             InitializeComponent();
         }
         public string mode;
-        //public OracleConnection conn;
+        public OracleConnection conn;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -30,6 +30,7 @@ namespace proyek_pcs_hotel
                     if (true)//CEK USERNAME
                     {
                         Receptionist f = new Receptionist();
+                        f.conn = this.conn;
                         f.Closed += (s, args) => this.Close();
                         this.Hide();
                         f.Show();

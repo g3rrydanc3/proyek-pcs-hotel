@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Oracle.ManagedDataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,15 @@ namespace proyek_pcs_hotel
 {
     public partial class Message : Form
     {
+        public OracleConnection conn;
         public Message()
         {
             InitializeComponent();
+        }
+
+        private void Message_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
