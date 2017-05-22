@@ -29,13 +29,13 @@ namespace proyek_pcs_hotel
                 var parser = new FileIniDataParser();
                 IniData data = parser.ReadFile("_config.ini");
                 string connectionString = "Data source=" + data["oracle"]["datasource"] + ";User ID=" + data["oracle"]["username"] + ";Password=" + data["oracle"]["password"];
+                MessageBox.Show(connectionString);
                 conn = new OracleConnection(connectionString);
                 conn.Open();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                
                 throw ex;
             }
         }
@@ -45,7 +45,7 @@ namespace proyek_pcs_hotel
             Login f = new Login();
             f.Closed += (s, args) => this.Close();
             f.mode = form;
-            f.conn = conn;
+            //f.conn = conn;
             this.Hide();
             f.Show();
         }
