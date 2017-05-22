@@ -161,7 +161,6 @@ CREATE TABLE restoran_menu (
   PRIMARY KEY (KODE_MENU))
 ;
 
-
 -- -----------------------------------------------------
 -- Table `restoran_hjual`
 -- -----------------------------------------------------
@@ -211,8 +210,36 @@ CREATE TABLE pelamar (
   ALAMAT_PELAMAR VARCHAR2(45) NOT NULL,
   TELEPON_PELAMAR NUMBER NOT NULL,
   EMAIL_PELAMAR VARCHAR2(45) NOT NULL,
-  PRIMARY KEY (KODE_PELAMAR))
+  KODE_DIVISI NUMBER NOT NULL,
+  PRIMARY KEY (KODE_PELAMAR)
+ ,
+  CONSTRAINT fk_pelamar_pegawai_divisi1
+    FOREIGN KEY (KODE_DIVISI)
+    REFERENCES pegawai_divisi (KODE_DIVISI)
+   )
 ;
+
+-- -----------------------------------------------------
+-- Table `message`
+-- -----------------------------------------------------
+CREATE TABLE message (
+  KODE_MESSAGE NUMBER NOT NULL,
+  KIRIM_KODE_DIVISI NUMBER NOT NULL,
+  TEIRMA_KODE_DIVISI NUMBER NOT NULL,
+  WAKTU TIMESTAMP(0) NULL,
+  PESAN VARCHAR2(45) NULL,
+  PRIMARY KEY (KODE_MESSAGE)
+ ,
+  CONSTRAINT fk_message_pegawai_divisi1
+    FOREIGN KEY (KIRIM_KODE_DIVISI)
+    REFERENCES pegawai_divisi (KODE_DIVISI)
+   ,
+  CONSTRAINT fk_message_pegawai_divisi2
+    FOREIGN KEY (TEIRMA_KODE_DIVISI)
+    REFERENCES pegawai_divisi (KODE_DIVISI)
+   )
+;
+
 
 -- -----------------------------------------------------
 -- Data for table `customer`
@@ -262,7 +289,6 @@ INSERT INTO laundry_jenis (KODE_LAUNDRY, JENIS_LAUNDRY, HARGA_LAUNDRY) VALUES (3
 -- -----------------------------------------------------
 INSERT INTO laundry_hjual (NOTA_LAUNDRY, TGL_LAUNDRY, KODE_KAMAR) VALUES (1, to_date('2017-05-20', 'YYYY-MM-DD'), 101);
 INSERT INTO laundry_hjual (NOTA_LAUNDRY, TGL_LAUNDRY, KODE_KAMAR) VALUES (2, to_date('2017-05-20', 'YYYY-MM-DD'), 102);
-
 
 -- -----------------------------------------------------
 -- Data for table `laundry_djual`
