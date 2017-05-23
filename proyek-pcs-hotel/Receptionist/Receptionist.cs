@@ -55,16 +55,15 @@ namespace proyek_pcs_hotel
 
         private void button1_Click(object sender, EventArgs e)
         {
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                dataGridView1.Rows[i].Selected = false;
+            }
             for (int i = 0; i < dataGridView1.Rows.Count-1; i++)
             {
                 if (dataGridView1.Rows[i].Cells[1].Value.ToString() == comboBox1.Text)
                 {
                     dataGridView1.Rows[i].Selected = true;
-                }
-                else
-                {
-                    MessageBox.Show("Kamar Terisi");
-                    break;
                 }
             }
             comboBox1.SelectedIndex = -1;
@@ -75,7 +74,7 @@ namespace proyek_pcs_hotel
             dataGridView1.Columns.Clear();
             try
             {
-                OracleDataAdapter adap = new OracleDataAdapter("select distinct k.kode_kamar, tipe_kamar, catatan, harga_kamar, (case when tgl_in > to_date('" + dateTimePicker1.Value.ToString().Substring(0, 10) + "', 'DD-MM-YYYY') then tgl_in || ' - ' || tgl_out else ' ' end) from kamar k, hotel_djual h where k.kode_kamar = h.kode_kamar and (to_date(sysdate,'DD/MM/YYYY') < tgl_in or to_date(sysdate,'DD/MM/YYYY') >= tgl_out)", conn);
+                OracleDataAdapter adap = new OracleDataAdapter("select distinct k.kode_kamar, tipe_kamar, catatan, harga_kamar, (case when tgl_in > to_date('" + dateTimePicker1.Value.ToString().Substring(0, 10) + "', 'DD-MM-YYYY') then tgl_in || ' - ' || tgl_out else ' ' end) from kamar k, hotel_djual h where k.kode_kamar = h.kode_kamar and (to_date(sysdate,'DD/MM/YYYY') < tgl_in or to_date(sysdate,'DD/MM/YYYY') >= tgl_out) union select distinct k.kode_kamar, tipe_kamar, catatan, harga_kamar, (case when tgl_in > to_date('" + dateTimePicker1.Value.ToString().Substring(0, 10) + "', 'DD-MM-YYYY') then tgl_in || ' - ' || tgl_out else ' ' end) from kamar k, hotel_djual h where k.kode_kamar not in (select h.kode_kamar from hotel_djual)", conn);
                 //OracleDataAdapter adap = new OracleDataAdapter("select k.kode_kamar, tipe_kamar, catatan, harga_kamar from kamar k, hotel_djual h where k.kode_kamar = h.kode_kamar and (to_date(sysdate,'DD/MM/YYYY') < tgl_in or to_date(sysdate,'DD/MM/YYYY') >= tgl_out)", conn);
                 DataTable dt = new DataTable();
                 adap.Fill(dt);
@@ -111,7 +110,7 @@ namespace proyek_pcs_hotel
             dataGridView2.Columns.Clear();
             try
             {
-                OracleDataAdapter adap = new OracleDataAdapter("select distinct kamar.kode_kamar, tipe_kamar, catatan, harga_kamar from kamar, hotel_djual where kamar.kode_kamar = hotel_djual.kode_kamar and (to_date(sysdate,'DD/MM/YYYY') < tgl_in or to_date(sysdate,'DD/MM/YYYY') >= tgl_out)", conn);
+                OracleDataAdapter adap = new OracleDataAdapter("select distinct kamar.kode_kamar, tipe_kamar, catatan, harga_kamar from kamar, hotel_djual where kamar.kode_kamar = hotel_djual.kode_kamar and (to_date(sysdate,'DD/MM/YYYY') < tgl_in or to_date(sysdate,'DD/MM/YYYY') >= tgl_out) union select distinct k.kode_kamar, tipe_kamar, catatan, harga_kamar from kamar k, hotel_djual h where k.kode_kamar not in (select h.kode_kamar from hotel_djual)", conn);
                 DataTable dt = new DataTable();
                 adap.Fill(dt);
                 dataGridView2.DataSource = dt;
