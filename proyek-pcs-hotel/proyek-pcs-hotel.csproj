@@ -183,6 +183,12 @@
     <Compile Include="Restoran\Restoran.Designer.cs">
       <DependentUpon>Restoran.cs</DependentUpon>
     </Compile>
+    <Compile Include="Restoran\Restoran_Input.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Restoran\Restoran_Input.Designer.cs">
+      <DependentUpon>Restoran_Input.cs</DependentUpon>
+    </Compile>
     <Compile Include="Self_Booking\SB.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -277,6 +283,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Restoran\Restoran.resx">
       <DependentUpon>Restoran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Restoran\Restoran_Input.resx">
+      <DependentUpon>Restoran_Input.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Self_Booking\SB.resx">
       <DependentUpon>SB.cs</DependentUpon>
