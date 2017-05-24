@@ -40,10 +40,9 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 27);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 40);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(519, 336);
+            this.dataGridView1.Size = new System.Drawing.Size(778, 504);
             this.dataGridView1.TabIndex = 0;
             // 
             // menuStrip1
@@ -55,8 +54,7 @@
             this.messageToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(519, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(778, 40);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -64,25 +62,24 @@
             // 
             this.soldOutToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.soldOutToolStripMenuItem.Name = "soldOutToolStripMenuItem";
-            this.soldOutToolStripMenuItem.Size = new System.Drawing.Size(83, 25);
+            this.soldOutToolStripMenuItem.Size = new System.Drawing.Size(121, 36);
             this.soldOutToolStripMenuItem.Text = "Sold Out";
             this.soldOutToolStripMenuItem.Click += new System.EventHandler(this.soldOutToolStripMenuItem_Click);
             // 
             // messageToolStripMenuItem
             // 
             this.messageToolStripMenuItem.Name = "messageToolStripMenuItem";
-            this.messageToolStripMenuItem.Size = new System.Drawing.Size(83, 25);
+            this.messageToolStripMenuItem.Size = new System.Drawing.Size(121, 36);
             this.messageToolStripMenuItem.Text = "Message";
             // 
             // Dapur
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(519, 363);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(778, 544);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Dapur";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dapur";
