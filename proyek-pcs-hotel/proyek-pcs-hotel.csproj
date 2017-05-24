@@ -122,6 +122,12 @@
     <Compile Include="HRD\HRD_Recruitment_Summary.Designer.cs">
       <DependentUpon>HRD_Recruitment_Summary.cs</DependentUpon>
     </Compile>
+    <Compile Include="Receptionist\Receptionist_IsiKamar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receptionist\Receptionist_IsiKamar.Designer.cs">
+      <DependentUpon>Receptionist_IsiKamar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lamar_Pekerjaan\LamarPekerjaan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HRD\HRD_Recruitment_Summary.resx">
       <DependentUpon>HRD_Recruitment_Summary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receptionist\Receptionist_IsiKamar.resx">
+      <DependentUpon>Receptionist_IsiKamar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lamar_Pekerjaan\LamarPekerjaan.resx">
       <DependentUpon>LamarPekerjaan.cs</DependentUpon>

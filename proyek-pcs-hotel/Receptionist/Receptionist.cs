@@ -121,5 +121,16 @@ namespace proyek_pcs_hotel
                 throw;
             }
         }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //booking kamar
+            Receptionist_IsiKamar f = new Receptionist_IsiKamar();
+            f.conn = conn;
+            f.label4.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            f.comboBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            f.label7.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            f.Show();
+        }
     }
 }
