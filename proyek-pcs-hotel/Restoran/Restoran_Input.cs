@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace proyek_pcs_hotel.Restoran
+namespace proyek_pcs_hotel
 {
     public partial class Restoran_Input : Form
     {
