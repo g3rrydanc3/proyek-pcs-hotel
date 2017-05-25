@@ -57,7 +57,7 @@ namespace proyek_pcs_hotel
                 if (ada)
                 {
                     Dapur f = new Dapur();
-                    //f.conn = conn;
+                    f.conn = conn;
                     f.Closed += (s, args) => this.Close();
                     this.Hide();
                     f.Show();
