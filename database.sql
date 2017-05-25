@@ -185,13 +185,13 @@ CREATE TABLE restoran_hjual (
 -- -----------------------------------------------------
 CREATE TABLE restoran_djual (
   NOTA_RESTO NUMBER NOT NULL,
-  KODE_MAKANAN NUMBER NOT NULL,
-  HARGA NUMBER NOT NULL,
+  KODE_MENU NUMBER NOT NULL,
+  QUANTITY NUMBER NOT NULL,
   SELESAI NUMBER(3) NOT NULL
  ,
-  PRIMARY KEY (KODE_MAKANAN, NOTA_RESTO),
-  CONSTRAINT FK_KODE_MAKANAN
-    FOREIGN KEY (KODE_MAKANAN)
+  PRIMARY KEY (KODE_MENU, NOTA_RESTO),
+  CONSTRAINT FK_KODE_MENU
+    FOREIGN KEY (KODE_MENU)
     REFERENCES restoran_menu (KODE_MENU),
   CONSTRAINT FK_NOTA_RESTO
     FOREIGN KEY (NOTA_RESTO)
@@ -345,17 +345,17 @@ INSERT INTO restoran_menu (KODE_MENU, JENIS_MENU, NAMA_MENU, HARGA_MENU, SOLDOUT
 -- -----------------------------------------------------
 -- Data for table `restoran_hjual`
 -- -----------------------------------------------------
-INSERT INTO restoran_hjual (NOTA_RESTO, TGL_RESTO, KODE_CUST) VALUES (1, to_date('2017-05-20', 'YYYY-MM-DD'), 101);
-INSERT INTO restoran_hjual (NOTA_RESTO, TGL_RESTO, KODE_CUST) VALUES (2, to_date('2017-05-20', 'YYYY-MM-DD'), null);
+INSERT INTO restoran_hjual (NOTA_RESTO, TGL_RESTO, KODE_KAMAR, MEJA) VALUES (1, to_date('2017-05-20', 'YYYY-MM-DD'), null, 1);
+INSERT INTO restoran_hjual (NOTA_RESTO, TGL_RESTO, KODE_KAMAR, MEJA) VALUES (2, to_date('2017-05-20', 'YYYY-MM-DD'), 101, null);
 
 -- -----------------------------------------------------
 -- Data for table `restoran_djual`
 -- -----------------------------------------------------
-INSERT INTO restoran_djual (NOTA_RESTO, KODE_MAKANAN, HARGA, SELESAI) VALUES (1, 1, 999999, 1);
-INSERT INTO restoran_djual (NOTA_RESTO, KODE_MAKANAN, HARGA, SELESAI) VALUES (1, 2, 650000, 1);
-INSERT INTO restoran_djual (NOTA_RESTO, KODE_MAKANAN, HARGA, SELESAI) VALUES (1, 5, 400000, 1);
-INSERT INTO restoran_djual (NOTA_RESTO, KODE_MAKANAN, HARGA, SELESAI) VALUES (2, 1, 600000, 0);
-INSERT INTO restoran_djual (NOTA_RESTO, KODE_MAKANAN, HARGA, SELESAI) VALUES (2, 5, 800000, 0);
-INSERT INTO restoran_djual (NOTA_RESTO, KODE_MAKANAN, HARGA, SELESAI) VALUES (2, 4, 999000, 0);
+INSERT INTO restoran_djual (NOTA_RESTO, KODE_MENU, QUANTITY, SELESAI) VALUES (1, 1, 1, 1);
+INSERT INTO restoran_djual (NOTA_RESTO, KODE_MENU, QUANTITY, SELESAI) VALUES (1, 2, 1, 1);
+INSERT INTO restoran_djual (NOTA_RESTO, KODE_MENU, QUANTITY, SELESAI) VALUES (1, 5, 1, 1);
+INSERT INTO restoran_djual (NOTA_RESTO, KODE_MENU, QUANTITY, SELESAI) VALUES (2, 1, 1, 0);
+INSERT INTO restoran_djual (NOTA_RESTO, KODE_MENU, QUANTITY, SELESAI) VALUES (2, 5, 1, 0);
+INSERT INTO restoran_djual (NOTA_RESTO, KODE_MENU, QUANTITY, SELESAI) VALUES (2, 4, 1, 0);
 
 COMMIT;
