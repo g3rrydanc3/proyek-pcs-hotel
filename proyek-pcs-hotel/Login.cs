@@ -87,7 +87,7 @@ namespace proyek_pcs_hotel
                 if (ada)
                 {
                     HRD f = new HRD();
-                    //f.conn = conn;
+                    f.conn = conn;
                     f.Closed += (s, args) => this.Close();
                     this.Hide();
                     f.Show();

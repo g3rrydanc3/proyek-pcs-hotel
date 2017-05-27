@@ -92,36 +92,6 @@
     <Compile Include="HRD\HRD.Designer.cs">
       <DependentUpon>HRD.cs</DependentUpon>
     </Compile>
-    <Compile Include="HRD\HRD_Recruitment Task.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="HRD\HRD_Recruitment Task.Designer.cs">
-      <DependentUpon>HRD_Recruitment Task.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HRD\HRD_Recruitment.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="HRD\HRD_Recruitment.Designer.cs">
-      <DependentUpon>HRD_Recruitment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HRD\HRD_Recruitment_Meeting.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="HRD\HRD_Recruitment_Meeting.Designer.cs">
-      <DependentUpon>HRD_Recruitment_Meeting.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HRD\HRD_Recruitment_Source.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="HRD\HRD_Recruitment_Source.Designer.cs">
-      <DependentUpon>HRD_Recruitment_Source.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HRD\HRD_Recruitment_Summary.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="HRD\HRD_Recruitment_Summary.Designer.cs">
-      <DependentUpon>HRD_Recruitment_Summary.cs</DependentUpon>
-    </Compile>
     <Compile Include="Receptionist\Receptionist_IsiKamar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,21 +197,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HRD\HRD.resx">
       <DependentUpon>HRD.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HRD\HRD_Recruitment Task.resx">
-      <DependentUpon>HRD_Recruitment Task.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HRD\HRD_Recruitment.resx">
-      <DependentUpon>HRD_Recruitment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HRD\HRD_Recruitment_Meeting.resx">
-      <DependentUpon>HRD_Recruitment_Meeting.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HRD\HRD_Recruitment_Source.resx">
-      <DependentUpon>HRD_Recruitment_Source.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HRD\HRD_Recruitment_Summary.resx">
-      <DependentUpon>HRD_Recruitment_Summary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Receptionist\Receptionist_IsiKamar.resx">
       <DependentUpon>Receptionist_IsiKamar.cs</DependentUpon>
