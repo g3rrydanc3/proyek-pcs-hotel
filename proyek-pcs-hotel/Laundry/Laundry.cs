@@ -35,13 +35,6 @@ namespace proyek_pcs_hotel
             {
                 comboBoxKamar.Items.Add(res.GetInt32(0));
             }
-            resetOrder();
-        }
-
-        private void resetOrder()
-        {
-            comboBoxKamar.SelectedIndex = -1;
-            radioButtonCuciBasah.Checked = true;
         }
 
         private void refreshDetail()
@@ -49,7 +42,7 @@ namespace proyek_pcs_hotel
             OracleCommand cmd = new OracleCommand(@"select h.tgl_laundry, h.nota_laundry, jenis_laundry, d.berat_laundry, h.kode_kamar, d.berat_laundry * j.harga_laundry as harga
                                                     from laundry_jenis j, laundry_djual d, laundry_hjual h
                                                     where j.kode_laundry = d.kode_laundry and d.nota_laundry = h.nota_laundry and
-                                                    d.sudah = '1'", conn);
+                                                    d.sudah = '0'", conn);
             OracleDataAdapter adap = new OracleDataAdapter(cmd);
             DataTable dt = new DataTable();
             adap.Fill(dt);
@@ -79,24 +72,21 @@ namespace proyek_pcs_hotel
                 string kamar = comboBoxKamar.Text;
                 int berat = (int) numericUpDownBerat.Value;
                 int jenis = 1;
+                string strJenis = "Cuci Basah";
                 if (radioButtonCuciKering.Checked)
                 {
                     jenis = 2;
+                    strJenis = "Cuci Kering";
                 }
                 else if (radioButtonSetrika.Checked)
                 {
                     jenis = 3;
+                    strJenis = "Setrika";
                 }
-                OracleCommand cmd = new OracleCommand("select count(*) from laundry_hjual where ", conn);
-                if (true)
-                {
 
-                }
-                cmd = new OracleCommand("select max(nota_laundry) from laundry_hjual", conn);
-                int nota_laundry = Int32.Parse(cmd.ExecuteScalar().ToString());
-                cmd = new OracleCommand("insert into laundry_hjual values(:a, sysdate, :b)", conn);
-                cmd.Parameters.Add(":a", nota_laundry);
-                //cmd.Parameters.Add(":b", )
+                comboBoxKamar.Enabled = false;
+                dataGridViewOrder.Rows.Add(dataGridViewOrder.Rows.Count + 1, strJenis + "-" + jenis, berat);
+                buttonSelesai.Enabled = true;
             }
             else
             {
@@ -104,9 +94,41 @@ namespace proyek_pcs_hotel
             }
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
+        private void buttonSelesai_Click(object sender, EventArgs e)
         {
+            OracleCommand cmd = new OracleCommand("select max(nota_laundry) from laundry_hjual", conn);
+            int nota_laundry = Int32.Parse(cmd.ExecuteScalar().ToString()) + 1;
 
+            cmd = new OracleCommand("insert into laundry_hjual values (:a, sysdate, :b)", conn);
+            cmd.Parameters.Add(":a", nota_laundry);
+            cmd.Parameters.Add(":b", comboBoxKamar.Text);
+            if (cmd.ExecuteNonQuery() != 0)
+            {
+                foreach (DataGridViewRow rows in dataGridViewOrder.Rows)
+                {
+                    cmd = new OracleCommand("insert into laundry_djual values(:a, :b, :c, :d)", conn);
+                    cmd.Parameters.Add(":a", nota_laundry);
+                    cmd.Parameters.Add(":b", rows.Cells[1].Value.ToString().Split('-')[1]);
+                    cmd.Parameters.Add(":c", Int32.Parse(rows.Cells[2].Value.ToString()));
+                    cmd.Parameters.Add(":d", '0');
+                    if (cmd.ExecuteNonQuery() == 0)
+                    {
+                        MessageBox.Show("Error insert laundry_djual");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Error insert laundry_hjual");
+            }
+
+            refreshDetail();
+            refreshOrder();
+            comboBoxKamar.Enabled = true;
+            radioButtonCuciKering.Checked = true;
+            numericUpDownBerat.Value = 1;
+            dataGridViewOrder.Rows.Clear();
+            buttonSelesai.Enabled = false;
         }
     }
 }

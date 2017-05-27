@@ -45,7 +45,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewOrder = new System.Windows.Forms.DataGridView();
             this.buttonSelesai = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -53,11 +53,14 @@
             this.label9 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.messageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBerat)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrder)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -73,7 +76,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1176, 811);
+            this.tabControl1.Size = new System.Drawing.Size(874, 537);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -83,7 +86,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(1168, 777);
+            this.tabPage1.Size = new System.Drawing.Size(866, 503);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Order Laundry";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -110,7 +113,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label6, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label7, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label8, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.dataGridView2, 4, 1);
+            this.tableLayoutPanel1.Controls.Add(this.dataGridViewOrder, 4, 1);
             this.tableLayoutPanel1.Controls.Add(this.buttonSelesai, 4, 8);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -127,7 +130,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1160, 769);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(858, 495);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // label1
@@ -141,6 +144,7 @@
             this.label1.Size = new System.Drawing.Size(55, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "Berat";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // numericUpDownBerat
             // 
@@ -148,9 +152,19 @@
             this.numericUpDownBerat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDownBerat.Location = new System.Drawing.Point(98, 107);
             this.numericUpDownBerat.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.numericUpDownBerat.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDownBerat.Name = "numericUpDownBerat";
             this.numericUpDownBerat.Size = new System.Drawing.Size(444, 29);
             this.numericUpDownBerat.TabIndex = 1;
+            this.numericUpDownBerat.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label3
             // 
@@ -163,6 +177,7 @@
             this.label3.Size = new System.Drawing.Size(55, 31);
             this.label3.TabIndex = 3;
             this.label3.Text = "Jenis";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // radioButtonCuciBasah
             // 
@@ -215,6 +230,7 @@
             this.label2.Size = new System.Drawing.Size(27, 45);
             this.label2.TabIndex = 2;
             this.label2.Text = "kg";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // buttonBerat
             // 
@@ -238,6 +254,7 @@
             this.label5.Size = new System.Drawing.Size(55, 45);
             this.label5.TabIndex = 9;
             this.label5.Text = "Kamar";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label4
             // 
@@ -248,7 +265,7 @@
             this.label4.Location = new System.Drawing.Point(6, 0);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 24);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(1148, 30);
+            this.label4.Size = new System.Drawing.Size(846, 30);
             this.label4.TabIndex = 7;
             this.label4.Text = "Order Laundry";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -274,6 +291,7 @@
             this.label6.Size = new System.Drawing.Size(13, 45);
             this.label6.TabIndex = 11;
             this.label6.Text = ":";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label7
             // 
@@ -285,6 +303,7 @@
             this.label7.Size = new System.Drawing.Size(13, 45);
             this.label7.TabIndex = 12;
             this.label7.Text = ":";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label8
             // 
@@ -296,27 +315,39 @@
             this.label8.Size = new System.Drawing.Size(13, 31);
             this.label8.TabIndex = 13;
             this.label8.Text = ":";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // dataGridView2
+            // dataGridViewOrder
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(590, 57);
-            this.dataGridView2.Name = "dataGridView2";
-            this.tableLayoutPanel1.SetRowSpan(this.dataGridView2, 7);
-            this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.Size = new System.Drawing.Size(567, 533);
-            this.dataGridView2.TabIndex = 14;
+            this.dataGridViewOrder.AllowUserToAddRows = false;
+            this.dataGridViewOrder.AllowUserToDeleteRows = false;
+            this.dataGridViewOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.dataGridViewOrder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewOrder.Location = new System.Drawing.Point(590, 57);
+            this.dataGridViewOrder.MultiSelect = false;
+            this.dataGridViewOrder.Name = "dataGridViewOrder";
+            this.dataGridViewOrder.ReadOnly = true;
+            this.tableLayoutPanel1.SetRowSpan(this.dataGridViewOrder, 7);
+            this.dataGridViewOrder.RowTemplate.Height = 28;
+            this.dataGridViewOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewOrder.Size = new System.Drawing.Size(265, 259);
+            this.dataGridViewOrder.TabIndex = 14;
             // 
             // buttonSelesai
             // 
             this.buttonSelesai.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonSelesai.Location = new System.Drawing.Point(590, 596);
+            this.buttonSelesai.Enabled = false;
+            this.buttonSelesai.Location = new System.Drawing.Point(590, 322);
             this.buttonSelesai.Name = "buttonSelesai";
-            this.buttonSelesai.Size = new System.Drawing.Size(567, 170);
+            this.buttonSelesai.Size = new System.Drawing.Size(265, 170);
             this.buttonSelesai.TabIndex = 15;
             this.buttonSelesai.Text = "Selesai";
             this.buttonSelesai.UseVisualStyleBackColor = true;
+            this.buttonSelesai.Click += new System.EventHandler(this.buttonSelesai_Click);
             // 
             // tabPage2
             // 
@@ -325,7 +356,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(1168, 777);
+            this.tabPage2.Size = new System.Drawing.Size(866, 503);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Detail Laundry";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -343,7 +374,7 @@
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1160, 769);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(858, 495);
             this.tableLayoutPanel2.TabIndex = 4;
             // 
             // dataGridView1
@@ -353,7 +384,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(6, 38);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1148, 723);
+            this.dataGridView1.Size = new System.Drawing.Size(846, 449);
             this.dataGridView1.TabIndex = 0;
             // 
             // label9
@@ -364,7 +395,7 @@
             this.label9.Location = new System.Drawing.Point(6, 0);
             this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(1148, 30);
+            this.label9.Size = new System.Drawing.Size(846, 30);
             this.label9.TabIndex = 1;
             this.label9.Text = "Detail Laundry";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -378,7 +409,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1176, 31);
+            this.menuStrip1.Size = new System.Drawing.Size(874, 31);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -388,11 +419,35 @@
             this.messageToolStripMenuItem.Size = new System.Drawing.Size(83, 25);
             this.messageToolStripMenuItem.Text = "Message";
             // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column1.HeaderText = "No";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 56;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column2.HeaderText = "Jenis";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 69;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column3.HeaderText = "Berat";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 71;
+            // 
             // Laundry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1176, 842);
+            this.ClientSize = new System.Drawing.Size(874, 568);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -407,7 +462,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBerat)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrder)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
@@ -444,7 +499,10 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem messageToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridViewOrder;
         private System.Windows.Forms.Button buttonSelesai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }
