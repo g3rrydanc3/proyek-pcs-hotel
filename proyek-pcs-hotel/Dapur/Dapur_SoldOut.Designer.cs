@@ -30,12 +30,10 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonAdd = new System.Windows.Forms.Button();
-            this.buttonCancel = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonSoldOut = new System.Windows.Forms.Button();
+            this.buttonDone = new System.Windows.Forms.Button();
+            this.buttonAvailable = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -46,19 +44,20 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.buttonAdd, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.buttonCancel, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.buttonSoldOut, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.buttonDone, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.buttonAvailable, 1, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(453, 381);
+            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(794, 553);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label1
@@ -69,82 +68,78 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(447, 40);
+            this.label1.Size = new System.Drawing.Size(788, 32);
             this.label1.TabIndex = 2;
             this.label1.Text = "Sold Out Menu";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // buttonAdd
+            // buttonSoldOut
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(320, 43);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(130, 43);
-            this.buttonAdd.TabIndex = 1;
-            this.buttonAdd.Text = "Sold Out";
-            this.buttonAdd.UseVisualStyleBackColor = true;
-            this.buttonAdd.Click += new System.EventHandler(this.button1_Click);
+            this.buttonSoldOut.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonSoldOut.Enabled = false;
+            this.buttonSoldOut.Location = new System.Drawing.Point(558, 35);
+            this.buttonSoldOut.Name = "buttonSoldOut";
+            this.buttonSoldOut.Size = new System.Drawing.Size(233, 43);
+            this.buttonSoldOut.TabIndex = 1;
+            this.buttonSoldOut.Text = "Sold Out";
+            this.buttonSoldOut.UseVisualStyleBackColor = true;
+            this.buttonSoldOut.Click += new System.EventHandler(this.buttonSoldOut_Click);
             // 
-            // buttonCancel
+            // buttonDone
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.buttonCancel, 2);
-            this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(3, 303);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(380, 67);
-            this.buttonCancel.TabIndex = 3;
-            this.buttonCancel.Text = "Done";
-            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.buttonDone, 2);
+            this.buttonDone.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonDone.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonDone.Location = new System.Drawing.Point(3, 483);
+            this.buttonDone.Name = "buttonDone";
+            this.buttonDone.Size = new System.Drawing.Size(788, 67);
+            this.buttonDone.TabIndex = 3;
+            this.buttonDone.Text = "Done";
+            this.buttonDone.UseVisualStyleBackColor = true;
+            this.buttonDone.Click += new System.EventHandler(this.buttonDone_Click);
             // 
-            // button1
+            // buttonAvailable
             // 
-            this.button1.Location = new System.Drawing.Point(320, 173);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 35);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Available";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonAvailable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonAvailable.Enabled = false;
+            this.buttonAvailable.Location = new System.Drawing.Point(558, 84);
+            this.buttonAvailable.Name = "buttonAvailable";
+            this.buttonAvailable.Size = new System.Drawing.Size(233, 43);
+            this.buttonAvailable.TabIndex = 5;
+            this.buttonAvailable.Text = "Available";
+            this.buttonAvailable.UseVisualStyleBackColor = true;
+            this.buttonAvailable.Click += new System.EventHandler(this.buttonAvailable_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 43);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 35);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
-            this.tableLayoutPanel1.SetRowSpan(this.dataGridView1, 2);
-            this.dataGridView1.Size = new System.Drawing.Size(311, 237);
+            this.dataGridView1.ReadOnly = true;
+            this.tableLayoutPanel1.SetRowSpan(this.dataGridView1, 3);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(549, 442);
             this.dataGridView1.TabIndex = 6;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column1.HeaderText = "Kode";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 70;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column2.HeaderText = "Nama";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 77;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Dapur_SoldOut
             // 
-            this.AcceptButton = this.buttonAdd;
+            this.AcceptButton = this.buttonSoldOut;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(453, 381);
+            this.CancelButton = this.buttonDone;
+            this.ClientSize = new System.Drawing.Size(794, 553);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Dapur_SoldOut";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Dapur";
+            this.Load += new System.EventHandler(this.Dapur_SoldOut_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -156,11 +151,9 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button buttonAvailable;
         public System.Windows.Forms.DataGridView dataGridView1;
-        public System.Windows.Forms.Button buttonAdd;
-        public System.Windows.Forms.Button buttonCancel;
+        public System.Windows.Forms.Button buttonSoldOut;
+        public System.Windows.Forms.Button buttonDone;
     }
 }

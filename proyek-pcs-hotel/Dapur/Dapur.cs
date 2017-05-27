@@ -59,6 +59,8 @@ namespace proyek_pcs_hotel
         private void soldOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Dapur_SoldOut f = new Dapur_SoldOut();
+            f.conn = conn;
+            f.ShowDialog();
         }
 
         
