@@ -16,18 +16,6 @@ DROP TABLE "PELAMAR" CASCADE CONSTRAINTS;
 purge recyclebin;
 
 -- -----------------------------------------------------
--- Table `customer`
--- -----------------------------------------------------
-CREATE TABLE customer (
-  KODE_CUST NUMBER NOT NULL,
-  NAMA_CUST VARCHAR2(50) NOT NULL,
-  ALAMAT_CUST VARCHAR2(50) NOT NULL,
-  TELP_CUST VARCHAR2(12) NULL,
-  EMAIL_CUST VARCHAR2(45) NULL,
-  PRIMARY KEY (KODE_CUST))
-;
-
--- -----------------------------------------------------
 -- Table `kamar`
 -- -----------------------------------------------------
 CREATE TABLE kamar (
@@ -43,12 +31,9 @@ CREATE TABLE kamar (
 -- -----------------------------------------------------
 CREATE TABLE hotel_hjual (
   NOTA_HOTEL NUMBER NOT NULL,
-  KODE_CUST NUMBER NOT NULL,
+  NAMA_CUST VARCHAR2(30) NOT NULL,
+  ALAMAT_CUST VARCHAR2(50) NOT NULL,
   PRIMARY KEY (NOTA_HOTEL)
- ,
-  CONSTRAINT FK_KODE_CUST_HOTEL
-    FOREIGN KEY (KODE_CUST)
-    REFERENCES customer (KODE_CUST))
 ;
 
 -- -----------------------------------------------------
@@ -247,13 +232,6 @@ CREATE TABLE message (
 
 
 -- -----------------------------------------------------
--- Data for table `customer`
--- -----------------------------------------------------
-INSERT INTO customer (KODE_CUST, NAMA_CUST, ALAMAT_CUST, TELP_CUST, EMAIL_CUST) VALUES (1, 'Customer 1', 'Alamat 1', '12345789', 'email@email.com');
-INSERT INTO customer (KODE_CUST, NAMA_CUST, ALAMAT_CUST, TELP_CUST, EMAIL_CUST) VALUES (2, 'Customer 2', 'Alamat 2', '9856541235', 'email@asdf.com');
-INSERT INTO customer (KODE_CUST, NAMA_CUST, ALAMAT_CUST, TELP_CUST, EMAIL_CUST) VALUES (3, 'Customer 3', 'Alamat 3', '154982154', 'email@fdsa.com');
-
--- -----------------------------------------------------
 -- Data for table `kamar`
 -- -----------------------------------------------------
 INSERT INTO kamar (KODE_KAMAR, TIPE_KAMAR, CATATAN, HARGA_KAMAR) VALUES (101, 'Standart', 'Banyak Kecoak', 300000);
@@ -269,10 +247,10 @@ INSERT INTO kamar (KODE_KAMAR, TIPE_KAMAR, CATATAN, HARGA_KAMAR) VALUES (204, 'S
 -- -----------------------------------------------------
 -- Data for table `hotel_hjual`
 -- -----------------------------------------------------
-INSERT INTO hotel_hjual (NOTA_HOTEL, KODE_CUST) VALUES (1, 1);
-INSERT INTO hotel_hjual (NOTA_HOTEL, KODE_CUST) VALUES (2, 1);
-INSERT INTO hotel_hjual (NOTA_HOTEL, KODE_CUST) VALUES (3, 2);
-INSERT INTO hotel_hjual (NOTA_HOTEL, KODE_CUST) VALUES (4, 3);
+INSERT INTO hotel_hjual (NOTA_HOTEL, NAMA_CUST, ALAMAT_CUST) VALUES (1, 'CUSTOMER 1', 'ALAMAT CUSTOMER 1');
+INSERT INTO hotel_hjual (NOTA_HOTEL, NAMA_CUST, ALAMAT_CUST) VALUES (2, 'CUSTOMER 1', 'ALAMAT CUSTOMER 2');
+INSERT INTO hotel_hjual (NOTA_HOTEL, NAMA_CUST, ALAMAT_CUST) VALUES (3, 'CUSTOMER 2', 'ALAMAT CUSTOMER 3');
+INSERT INTO hotel_hjual (NOTA_HOTEL, NAMA_CUST, ALAMAT_CUST) VALUES (4, 'CUSTOMER 3', 'ALAMAT CUSTOMER 4');
 
 -- -----------------------------------------------------
 -- Data for table `hotel_djual`

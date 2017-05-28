@@ -67,9 +67,12 @@ namespace proyek_pcs_hotel
             }
         }
 
-        private void textBox1_Enter(object sender, EventArgs e)
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            MessageBox.Show("Enter");
+            if (e.KeyCode == Keys.Enter)
+            {
+                
+            }
         }
     }
 }
