@@ -14,95 +14,67 @@ namespace proyek_pcs_hotel
     public partial class Receptionist : Form
     {
         public OracleConnection conn;
+        string tempKodeUpdate = "";
 
         public Receptionist()
         {
             InitializeComponent();
         }
 
-        private void Receptionist_Load(object sender, EventArgs e)
-        {
-            comboTipeKamar();
-            kamar();
-        }
-
-        public void comboTipeKamar()
+        private void refreshComboBoxTipe()
         {
             comboBox1.Items.Clear();
-            try
+            comboBox1.Items.Add("All");
+            OracleDataAdapter adap = new OracleDataAdapter("select distinct tipe_kamar from kamar", conn);
+            DataTable dt = new DataTable();
+            adap.Fill(dt);
+            for (int i = 0; i < dt.Rows.Count; i++)
             {
-                OracleDataAdapter adap = new OracleDataAdapter("select distinct tipe_kamar from kamar", conn);
-                DataTable dt = new DataTable();
-                adap.Fill(dt);
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    comboBox1.Items.Add(dt.Rows[i].ItemArray[0].ToString());
-                }
+                comboBox1.Items.Add(dt.Rows[i].ItemArray[0].ToString());
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                throw;
-            }
+            comboBox1.SelectedIndex = 0;
         }
 
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        public void refreshKamar()
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            OracleCommand cmd;
+            if (comboBox1.Text == "All")
             {
-                e.Handled = true;
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
-            {
-                dataGridView1.Rows[i].Selected = false;
-            }
-            for (int i = 0; i < dataGridView1.Rows.Count-1; i++)
-            {
-                if (dataGridView1.Rows[i].Cells[1].Value.ToString() == comboBox1.Text)
-                {
-                    dataGridView1.Rows[i].Selected = true;
-                }
-            }
-            comboBox1.SelectedIndex = -1;
-        }
-        
-        public void kamar()
-        {
-            dataGridView1.Columns.Clear();
-            try
-            {
-                OracleDataAdapter adap = new OracleDataAdapter("select distinct k.kode_kamar, tipe_kamar, catatan, harga_kamar, (case when tgl_in > to_date('" + dateTimePicker1.Value.ToString().Substring(0, 10) + "', 'DD-MM-YYYY') then tgl_in || ' - ' || tgl_out else ' ' end) from kamar k, hotel_djual h where k.kode_kamar = h.kode_kamar and (to_date(sysdate,'DD/MM/YYYY') < tgl_in or to_date(sysdate,'DD/MM/YYYY') >= tgl_out) union select distinct k.kode_kamar, tipe_kamar, catatan, harga_kamar, (case when tgl_in > to_date('" + dateTimePicker1.Value.ToString().Substring(0, 10) + "', 'DD-MM-YYYY') then tgl_in || ' - ' || tgl_out else ' ' end) from kamar k, hotel_djual h where k.kode_kamar not in (select h.kode_kamar from hotel_djual)", conn);
-                //OracleDataAdapter adap = new OracleDataAdapter("select k.kode_kamar, tipe_kamar, catatan, harga_kamar from kamar k, hotel_djual h where k.kode_kamar = h.kode_kamar and (to_date(sysdate,'DD/MM/YYYY') < tgl_in or to_date(sysdate,'DD/MM/YYYY') >= tgl_out)", conn);
-                DataTable dt = new DataTable();
-                adap.Fill(dt);
-                dataGridView1.DataSource = dt;
-                dataGridView1.Columns[4].HeaderText = "DI BOOKING TANGGAL";
-                for (int i = 0; i < dataGridView1.Columns.Count; i++)
-                {
-                    dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                throw;
-            }
-        }
-
-        private void tabControl1_Click(object sender, EventArgs e)
-        {
-            if (tabControl1.SelectedTab == tabPage1)
-            {
-                comboTipeKamar();
-                kamar();
+                cmd = new OracleCommand(@"select kode_kamar as nomor, tipe_kamar as tipe, catatan, harga_kamar as harga
+                                                    from kamar k
+                                                    where kode_kamar not in (
+                                                        select kode_kamar 
+                                                        from hotel_djual
+                                                        where (to_date(:a, 'dd-mm-yy') between tgl_in and tgl_out - 1)
+                                                    )", conn);
+                cmd.Parameters.Add(":a", dateTimePicker1.Value.ToString("dd-MM-yy"));
             }
             else
             {
-                statusHariIni();
+                cmd = new OracleCommand(@"select kode_kamar as nomor, tipe_kamar as tipe, catatan, harga_kamar as harga
+                                                    from kamar k
+                                                    where kode_kamar not in (
+                                                        select kode_kamar 
+                                                        from hotel_djual
+                                                        where (to_date(:a, 'dd-mm-yy') between tgl_in and tgl_out - 1)
+                                                    ) and
+                                                    tipe_kamar = :b", conn);
+                cmd.Parameters.Add(":a", dateTimePicker1.Value.ToString("dd-MM-yy"));
+                cmd.Parameters.Add(":b", comboBox1.Text);
+            }
+
+            OracleDataAdapter adap = new OracleDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            adap.Fill(dt);
+            dataGridView1.DataSource = dt;
+            foreach (DataGridViewColumn col in dataGridView1.Columns)
+            {
+                col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                col.ReadOnly = true;
+                if (col.HeaderText == "HARGA")
+                {
+                    col.DefaultCellStyle.Format = "N2";
+                }
             }
         }
 
@@ -111,16 +83,64 @@ namespace proyek_pcs_hotel
             dataGridView2.Columns.Clear();
             try
             {
-                //OracleDataAdapter adap = new OracleDataAdapter("select distinct kamar.kode_kamar, tipe_kamar, catatan, harga_kamar from kamar, hotel_djual where kamar.kode_kamar = hotel_djual.kode_kamar and (to_date(sysdate,'DD/MM/YYYY') < tgl_in or to_date(sysdate,'DD/MM/YYYY') >= tgl_out) union select distinct k.kode_kamar, tipe_kamar, catatan, harga_kamar from kamar k, hotel_djual h where k.kode_kamar not in (select h.kode_kamar from hotel_djual)", conn);
-                OracleDataAdapter adap = new OracleDataAdapter("select distinct kamar.kode_kamar from kamar, hotel_djual where kamar.kode_kamar = hotel_djual.kode_kamar and (to_date(sysdate,'DD/MM/YYYY') < tgl_in or to_date(sysdate,'DD/MM/YYYY') >= tgl_out) union select distinct k.kode_kamar from kamar k, hotel_djual h where k.kode_kamar not in (select h.kode_kamar from hotel_djual)", conn);
+                OracleCommand cmd = new OracleCommand(@"select kode_kamar as nomor, tipe_kamar as tipe, catatan, harga_kamar as harga, (select count(*) 
+                                                            from hotel_djual d
+                                                            where (to_date(:a, 'dd-mm-yy') between tgl_in and tgl_out - 1) and
+                                                            k.kode_kamar = d.kode_kamar
+                                                        ) as terisi
+                                                        from kamar k", conn);
+                cmd.Parameters.Add(":a", DateTime.Now.ToString("dd-MM-yy"));
+                OracleDataAdapter adap = new OracleDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 adap.Fill(dt);
                 dataGridView2.DataSource = dt;
+
+                foreach (DataGridViewColumn col in dataGridView2.Columns)
+                {
+                    col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                    if (col.HeaderText == "TERISI")
+                    {
+                        col.ReadOnly = true;
+                    }
+                    if (col.HeaderText == "HARGA")
+                    {
+                        col.DefaultCellStyle.Format = "N2";
+                    }
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 throw;
+            }
+        }
+
+        private void Receptionist_Load(object sender, EventArgs e)
+        {
+            refreshComboBoxTipe();
+            refreshKamar();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            refreshKamar();
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            refreshKamar();
+        }
+
+        private void tabControl1_Click(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedTab == tabPage1)
+            {
+                refreshComboBoxTipe();
+                refreshKamar();
+            }
+            else
+            {
+                statusHariIni();
             }
         }
 
@@ -137,14 +157,26 @@ namespace proyek_pcs_hotel
             f.Show();
         }
 
-        private void dataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView2_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
-            //pesan kamar
-            Receptionist_IsiKamar f = new Receptionist_IsiKamar();
-            f.conn = conn;
-            f.label4.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
-            f.tipe = "pesan";
-            f.Show();
+            tempKodeUpdate = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
+        }
+
+        private void dataGridView2_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            OracleCommand cmd = new OracleCommand("update kamar set kode_kamar = :a, tipe_kamar = :b, catatan = :c, harga_kamar = :d where kode_kamar = :e", conn);
+            cmd.Parameters.Add(":a", dataGridView2.Rows[e.RowIndex].Cells[0].Value);
+            cmd.Parameters.Add(":b", dataGridView2.Rows[e.RowIndex].Cells[1].Value);
+            cmd.Parameters.Add(":c", dataGridView2.Rows[e.RowIndex].Cells[2].Value);
+            cmd.Parameters.Add(":d", dataGridView2.Rows[e.RowIndex].Cells[3].Value);
+            cmd.Parameters.Add(":e", tempKodeUpdate);
+            if (cmd.ExecuteNonQuery() == 0)
+            {
+                MessageBox.Show("Error update kamar");
+            }
+            tempKodeUpdate = "";
+            refreshComboBoxTipe();
+            refreshKamar();
         }
     }
 }
