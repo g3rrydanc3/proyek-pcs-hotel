@@ -14,6 +14,7 @@ namespace proyek_pcs_hotel
     public partial class Receptionist : Form
     {
         public OracleConnection conn;
+
         public Receptionist()
         {
             InitializeComponent();
@@ -111,7 +112,7 @@ namespace proyek_pcs_hotel
             try
             {
                 //OracleDataAdapter adap = new OracleDataAdapter("select distinct kamar.kode_kamar, tipe_kamar, catatan, harga_kamar from kamar, hotel_djual where kamar.kode_kamar = hotel_djual.kode_kamar and (to_date(sysdate,'DD/MM/YYYY') < tgl_in or to_date(sysdate,'DD/MM/YYYY') >= tgl_out) union select distinct k.kode_kamar, tipe_kamar, catatan, harga_kamar from kamar k, hotel_djual h where k.kode_kamar not in (select h.kode_kamar from hotel_djual)", conn);
-                OracleDataAdapter adap = new OracleDataAdapter("select distinct kamar.kode_kamar from kamar, hotel_djual where kamar.kode_kamar = hotel_djual.kode_kamar and (to_date(sysdate,'DD/MM/YYYY') < tgl_in or to_date(sysdate,'DD/MM/YYYY') >= tgl_out) union select distinct k.kode_kamar, tipe_kamar, catatan, harga_kamar from kamar k, hotel_djual h where k.kode_kamar not in (select h.kode_kamar from hotel_djual)", conn);
+                OracleDataAdapter adap = new OracleDataAdapter("select distinct kamar.kode_kamar from kamar, hotel_djual where kamar.kode_kamar = hotel_djual.kode_kamar and (to_date(sysdate,'DD/MM/YYYY') < tgl_in or to_date(sysdate,'DD/MM/YYYY') >= tgl_out) union select distinct k.kode_kamar from kamar k, hotel_djual h where k.kode_kamar not in (select h.kode_kamar from hotel_djual)", conn);
                 DataTable dt = new DataTable();
                 adap.Fill(dt);
                 dataGridView2.DataSource = dt;
@@ -131,6 +132,18 @@ namespace proyek_pcs_hotel
             f.label4.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             f.comboBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             f.label7.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            f.tanggal = dateTimePicker1.Value.ToString().Substring(0, 10);
+            f.tipe = "booking";
+            f.Show();
+        }
+
+        private void dataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //pesan kamar
+            Receptionist_IsiKamar f = new Receptionist_IsiKamar();
+            f.conn = conn;
+            f.label4.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
+            f.tipe = "pesan";
             f.Show();
         }
     }
