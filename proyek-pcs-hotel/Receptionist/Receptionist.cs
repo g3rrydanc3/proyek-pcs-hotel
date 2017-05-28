@@ -110,7 +110,8 @@ namespace proyek_pcs_hotel
             dataGridView2.Columns.Clear();
             try
             {
-                OracleDataAdapter adap = new OracleDataAdapter("select distinct kamar.kode_kamar, tipe_kamar, catatan, harga_kamar from kamar, hotel_djual where kamar.kode_kamar = hotel_djual.kode_kamar and (to_date(sysdate,'DD/MM/YYYY') < tgl_in or to_date(sysdate,'DD/MM/YYYY') >= tgl_out) union select distinct k.kode_kamar, tipe_kamar, catatan, harga_kamar from kamar k, hotel_djual h where k.kode_kamar not in (select h.kode_kamar from hotel_djual)", conn);
+                //OracleDataAdapter adap = new OracleDataAdapter("select distinct kamar.kode_kamar, tipe_kamar, catatan, harga_kamar from kamar, hotel_djual where kamar.kode_kamar = hotel_djual.kode_kamar and (to_date(sysdate,'DD/MM/YYYY') < tgl_in or to_date(sysdate,'DD/MM/YYYY') >= tgl_out) union select distinct k.kode_kamar, tipe_kamar, catatan, harga_kamar from kamar k, hotel_djual h where k.kode_kamar not in (select h.kode_kamar from hotel_djual)", conn);
+                OracleDataAdapter adap = new OracleDataAdapter("select distinct kamar.kode_kamar from kamar, hotel_djual where kamar.kode_kamar = hotel_djual.kode_kamar and (to_date(sysdate,'DD/MM/YYYY') < tgl_in or to_date(sysdate,'DD/MM/YYYY') >= tgl_out) union select distinct k.kode_kamar, tipe_kamar, catatan, harga_kamar from kamar k, hotel_djual h where k.kode_kamar not in (select h.kode_kamar from hotel_djual)", conn);
                 DataTable dt = new DataTable();
                 adap.Fill(dt);
                 dataGridView2.DataSource = dt;
