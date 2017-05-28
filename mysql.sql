@@ -9,20 +9,6 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Table `customer`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `customer` (
-  `KODE_CUST` INT NOT NULL,
-  `NAMA_CUST` VARCHAR(50) NOT NULL,
-  `ALAMAT_CUST` VARCHAR(50) NOT NULL,
-  `TELP_CUST` VARCHAR(12) NULL,
-  `EMAIL_CUST` VARCHAR(45) NULL,
-  PRIMARY KEY (`KODE_CUST`))
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = latin1;
-
-
--- -----------------------------------------------------
 -- Table `kamar`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `kamar` (
@@ -40,12 +26,9 @@ DEFAULT CHARACTER SET = latin1;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `hotel_hjual` (
   `NOTA_HOTEL` INT NOT NULL,
-  `KODE_CUST` INT NOT NULL,
-  PRIMARY KEY (`NOTA_HOTEL`, `KODE_CUST`),
-  INDEX `FK_KODE_CUST_HOTEL` (`KODE_CUST` ASC),
-  CONSTRAINT `FK_KODE_CUST_HOTEL`
-    FOREIGN KEY (`KODE_CUST`)
-    REFERENCES `customer` (`KODE_CUST`))
+  `NAMA_CUST` VARCHAR(45) NOT NULL,
+  `ALAMAT_CUST` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`NOTA_HOTEL`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 
@@ -281,17 +264,6 @@ SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 -- -----------------------------------------------------
--- Data for table `customer`
--- -----------------------------------------------------
-START TRANSACTION;
-INSERT INTO `customer` (`KODE_CUST`, `NAMA_CUST`, `ALAMAT_CUST`, `TELP_CUST`, `EMAIL_CUST`) VALUES (1, 'Customer 1', 'Alamat 1', '12345789', 'email@email.com');
-INSERT INTO `customer` (`KODE_CUST`, `NAMA_CUST`, `ALAMAT_CUST`, `TELP_CUST`, `EMAIL_CUST`) VALUES (2, 'Customer 2', 'Alamat 2', '9856541235', 'email@asdf.com');
-INSERT INTO `customer` (`KODE_CUST`, `NAMA_CUST`, `ALAMAT_CUST`, `TELP_CUST`, `EMAIL_CUST`) VALUES (3, 'Customer 3', 'Alamat 3', '154982154', 'email@fdsa.com');
-
-COMMIT;
-
-
--- -----------------------------------------------------
 -- Data for table `kamar`
 -- -----------------------------------------------------
 START TRANSACTION;
@@ -312,10 +284,10 @@ COMMIT;
 -- Data for table `hotel_hjual`
 -- -----------------------------------------------------
 START TRANSACTION;
-INSERT INTO `hotel_hjual` (`NOTA_HOTEL`, `KODE_CUST`) VALUES (1, 1);
-INSERT INTO `hotel_hjual` (`NOTA_HOTEL`, `KODE_CUST`) VALUES (2, 1);
-INSERT INTO `hotel_hjual` (`NOTA_HOTEL`, `KODE_CUST`) VALUES (3, 2);
-INSERT INTO `hotel_hjual` (`NOTA_HOTEL`, `KODE_CUST`) VALUES (4, 3);
+INSERT INTO `hotel_hjual` (`NOTA_HOTEL`, `NAMA_CUST`, `ALAMAT_CUST`) VALUES (1, 'CUSTOMER 1', 'ALAMAT CUSTOMER 1');
+INSERT INTO `hotel_hjual` (`NOTA_HOTEL`, `NAMA_CUST`, `ALAMAT_CUST`) VALUES (2, 'CUSTOMER 2', 'ALAMAT CUSTOMER 2');
+INSERT INTO `hotel_hjual` (`NOTA_HOTEL`, `NAMA_CUST`, `ALAMAT_CUST`) VALUES (3, 'CUSTOMER 3', 'ALAMAT CUSTOMER 3');
+INSERT INTO `hotel_hjual` (`NOTA_HOTEL`, `NAMA_CUST`, `ALAMAT_CUST`) VALUES (4, 'CUSTOMER 4', 'ALAMAT CUSTOMER 4');
 
 COMMIT;
 
