@@ -43,6 +43,26 @@ namespace proyek_pcs_hotel
             }
         }
 
+        private void textBoxTelepon_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -2))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxEmail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar == '@') && ((sender as TextBox).Text.IndexOf('@') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(textBoxNama.Text) || String.IsNullOrEmpty(textBoxTempatLahir.Text) || String.IsNullOrEmpty(textBoxAgama.Text) || String.IsNullOrEmpty(textBoxAlamat.Text) || String.IsNullOrEmpty(textBoxTelepon.Text) || String.IsNullOrEmpty(textBoxEmail.Text) || String.IsNullOrEmpty(textBoxPendidikan.Text) || String.IsNullOrEmpty(textBoxFoto.Text) || (radioButton1.Checked == false && radioButton2.Checked == false) || (radioButton3.Checked == false && radioButton4.Checked == false) || (radioButton5.Checked == false && radioButton6.Checked == false && radioButton7.Checked == false && radioButton8.Checked == false && radioButton9.Checked == false))
@@ -133,7 +153,7 @@ namespace proyek_pcs_hotel
                     File.Copy(fileLocation, appPath + fileSimpan);
 
 
-                    string smtpAddress = "smtp.gmail.com";
+                    /**string smtpAddress = "smtp.gmail.com";
                     int portNumber = 587;
                     bool enableSSL = true;
 
@@ -161,7 +181,7 @@ namespace proyek_pcs_hotel
                             smtp.EnableSsl = enableSSL;
                             smtp.Send(mail);
                         }
-                    }
+                    }*/
 
                     /*var fromAddress = new MailAddress("andhikakurnia21@gmail.com", "HOTEL TRANSILVINIA");
                     var toAddress = new MailAddress("alfonsiaronnalf@gmail.com", "Ronna");

@@ -156,6 +156,7 @@
             this.textBoxEmail.Size = new System.Drawing.Size(390, 20);
             this.textBoxEmail.TabIndex = 51;
             this.textBoxEmail.Text = "a@a.com";
+            this.textBoxEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxEmail_KeyPress);
             // 
             // textBoxTelepon
             // 
@@ -164,6 +165,7 @@
             this.textBoxTelepon.Size = new System.Drawing.Size(390, 20);
             this.textBoxTelepon.TabIndex = 50;
             this.textBoxTelepon.Text = "123";
+            this.textBoxTelepon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTelepon_KeyPress);
             // 
             // textBoxAlamat
             // 
