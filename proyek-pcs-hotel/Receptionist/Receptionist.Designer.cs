@@ -211,6 +211,7 @@
             this.messageToolStripMenuItem.Name = "messageToolStripMenuItem";
             this.messageToolStripMenuItem.Size = new System.Drawing.Size(65, 19);
             this.messageToolStripMenuItem.Text = "Message";
+            this.messageToolStripMenuItem.Click += new System.EventHandler(this.messageToolStripMenuItem_Click);
             // 
             // Receptionist
             // 

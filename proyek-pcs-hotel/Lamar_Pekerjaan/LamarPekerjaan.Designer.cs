@@ -30,26 +30,25 @@
         {
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.label12 = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.label11 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBoxFoto = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBoxPendidikan = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.textBoxTelepon = new System.Windows.Forms.TextBox();
+            this.textBoxAlamat = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxAgama = new System.Windows.Forms.TextBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxTempatLahir = new System.Windows.Forms.TextBox();
+            this.textBoxNama = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -59,7 +58,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radioButton9 = new System.Windows.Forms.RadioButton();
+            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -75,19 +83,6 @@
             this.label12.Size = new System.Drawing.Size(86, 13);
             this.label12.TabIndex = 60;
             this.label12.Text = "pilih satu jabatan";
-            // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "HRD",
-            "Receptionist",
-            "Dapur",
-            "Laundry"});
-            this.checkedListBox1.Location = new System.Drawing.Point(143, 304);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(390, 64);
-            this.checkedListBox1.TabIndex = 59;
             // 
             // label11
             // 
@@ -109,14 +104,14 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox9
+            // textBoxFoto
             // 
-            this.textBox9.Enabled = false;
-            this.textBox9.Location = new System.Drawing.Point(548, 246);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(168, 20);
-            this.textBox9.TabIndex = 56;
-            this.textBox9.Visible = false;
+            this.textBoxFoto.Enabled = false;
+            this.textBoxFoto.Location = new System.Drawing.Point(548, 246);
+            this.textBoxFoto.Name = "textBoxFoto";
+            this.textBoxFoto.Size = new System.Drawing.Size(168, 20);
+            this.textBoxFoto.TabIndex = 56;
+            this.textBoxFoto.Visible = false;
             // 
             // pictureBox1
             // 
@@ -127,12 +122,13 @@
             this.pictureBox1.TabIndex = 55;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox8
+            // textBoxPendidikan
             // 
-            this.textBox8.Location = new System.Drawing.Point(143, 190);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(390, 20);
-            this.textBox8.TabIndex = 54;
+            this.textBoxPendidikan.Location = new System.Drawing.Point(143, 190);
+            this.textBoxPendidikan.Name = "textBoxPendidikan";
+            this.textBoxPendidikan.Size = new System.Drawing.Size(390, 20);
+            this.textBoxPendidikan.TabIndex = 54;
+            this.textBoxPendidikan.Text = "Pendidikan1";
             // 
             // label10
             // 
@@ -153,26 +149,29 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox6
+            // textBoxEmail
             // 
-            this.textBox6.Location = new System.Drawing.Point(143, 273);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(390, 20);
-            this.textBox6.TabIndex = 51;
+            this.textBoxEmail.Location = new System.Drawing.Point(143, 273);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(390, 20);
+            this.textBoxEmail.TabIndex = 51;
+            this.textBoxEmail.Text = "a@a.com";
             // 
-            // textBox5
+            // textBoxTelepon
             // 
-            this.textBox5.Location = new System.Drawing.Point(143, 246);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(390, 20);
-            this.textBox5.TabIndex = 50;
+            this.textBoxTelepon.Location = new System.Drawing.Point(143, 246);
+            this.textBoxTelepon.Name = "textBoxTelepon";
+            this.textBoxTelepon.Size = new System.Drawing.Size(390, 20);
+            this.textBoxTelepon.TabIndex = 50;
+            this.textBoxTelepon.Text = "123";
             // 
-            // textBox4
+            // textBoxAlamat
             // 
-            this.textBox4.Location = new System.Drawing.Point(143, 220);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(390, 20);
-            this.textBox4.TabIndex = 49;
+            this.textBoxAlamat.Location = new System.Drawing.Point(143, 220);
+            this.textBoxAlamat.Name = "textBoxAlamat";
+            this.textBoxAlamat.Size = new System.Drawing.Size(390, 20);
+            this.textBoxAlamat.TabIndex = 49;
+            this.textBoxAlamat.Text = "Alamat1";
             // 
             // checkBox1
             // 
@@ -191,13 +190,13 @@
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(51, 17);
             this.radioButton4.TabIndex = 47;
-            this.radioButton4.TabStop = true;
             this.radioButton4.Text = "WNA";
             this.radioButton4.UseVisualStyleBackColor = true;
             // 
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
+            this.radioButton3.Checked = true;
             this.radioButton3.Location = new System.Drawing.Point(143, 137);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(47, 17);
@@ -206,28 +205,29 @@
             this.radioButton3.Text = "WNI";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // textBoxAgama
             // 
-            this.textBox3.Location = new System.Drawing.Point(143, 107);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(390, 20);
-            this.textBox3.TabIndex = 45;
+            this.textBoxAgama.Location = new System.Drawing.Point(143, 107);
+            this.textBoxAgama.Name = "textBoxAgama";
+            this.textBoxAgama.Size = new System.Drawing.Size(390, 20);
+            this.textBoxAgama.TabIndex = 45;
+            this.textBoxAgama.Text = "Agama1";
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(272, 79);
+            this.radioButton2.Location = new System.Drawing.Point(129, 5);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(79, 17);
             this.radioButton2.TabIndex = 44;
-            this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Perempuan";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(143, 79);
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(6, 5);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(68, 17);
             this.radioButton1.TabIndex = 43;
@@ -242,19 +242,21 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(230, 20);
             this.dateTimePicker1.TabIndex = 42;
             // 
-            // textBox2
+            // textBoxTempatLahir
             // 
-            this.textBox2.Location = new System.Drawing.Point(143, 50);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(156, 20);
-            this.textBox2.TabIndex = 41;
+            this.textBoxTempatLahir.Location = new System.Drawing.Point(143, 50);
+            this.textBoxTempatLahir.Name = "textBoxTempatLahir";
+            this.textBoxTempatLahir.Size = new System.Drawing.Size(156, 20);
+            this.textBoxTempatLahir.TabIndex = 41;
+            this.textBoxTempatLahir.Text = "Tempat1";
             // 
-            // textBox1
+            // textBoxNama
             // 
-            this.textBox1.Location = new System.Drawing.Point(143, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(390, 20);
-            this.textBox1.TabIndex = 40;
+            this.textBoxNama.Location = new System.Drawing.Point(143, 26);
+            this.textBoxNama.Name = "textBoxNama";
+            this.textBoxNama.Size = new System.Drawing.Size(390, 20);
+            this.textBoxNama.TabIndex = 40;
+            this.textBoxNama.Text = "Nama1";
             // 
             // label9
             // 
@@ -337,32 +339,105 @@
             this.label1.TabIndex = 31;
             this.label1.Text = "Nama : ";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Location = new System.Drawing.Point(143, 76);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(390, 25);
+            this.groupBox1.TabIndex = 61;
+            this.groupBox1.TabStop = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.radioButton9);
+            this.groupBox2.Controls.Add(this.radioButton8);
+            this.groupBox2.Controls.Add(this.radioButton7);
+            this.groupBox2.Controls.Add(this.radioButton6);
+            this.groupBox2.Controls.Add(this.radioButton5);
+            this.groupBox2.Location = new System.Drawing.Point(143, 300);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(314, 74);
+            this.groupBox2.TabIndex = 62;
+            this.groupBox2.TabStop = false;
+            // 
+            // radioButton9
+            // 
+            this.radioButton9.AutoSize = true;
+            this.radioButton9.Location = new System.Drawing.Point(243, 16);
+            this.radioButton9.Name = "radioButton9";
+            this.radioButton9.Size = new System.Drawing.Size(63, 17);
+            this.radioButton9.TabIndex = 4;
+            this.radioButton9.Text = "Laundry";
+            this.radioButton9.UseVisualStyleBackColor = true;
+            // 
+            // radioButton8
+            // 
+            this.radioButton8.AutoSize = true;
+            this.radioButton8.Location = new System.Drawing.Point(129, 39);
+            this.radioButton8.Name = "radioButton8";
+            this.radioButton8.Size = new System.Drawing.Size(54, 17);
+            this.radioButton8.TabIndex = 3;
+            this.radioButton8.Text = "Dapur";
+            this.radioButton8.UseVisualStyleBackColor = true;
+            // 
+            // radioButton7
+            // 
+            this.radioButton7.AutoSize = true;
+            this.radioButton7.Location = new System.Drawing.Point(129, 16);
+            this.radioButton7.Name = "radioButton7";
+            this.radioButton7.Size = new System.Drawing.Size(68, 17);
+            this.radioButton7.TabIndex = 2;
+            this.radioButton7.Text = "Restoran";
+            this.radioButton7.UseVisualStyleBackColor = true;
+            // 
+            // radioButton6
+            // 
+            this.radioButton6.AutoSize = true;
+            this.radioButton6.Location = new System.Drawing.Point(7, 39);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(84, 17);
+            this.radioButton6.TabIndex = 1;
+            this.radioButton6.Text = "Receptionist";
+            this.radioButton6.UseVisualStyleBackColor = true;
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.Checked = true;
+            this.radioButton5.Location = new System.Drawing.Point(7, 16);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(49, 17);
+            this.radioButton5.TabIndex = 0;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "HRD";
+            this.radioButton5.UseVisualStyleBackColor = true;
+            // 
             // LamarPekerjaan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(728, 410);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.textBoxFoto);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.textBoxPendidikan);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBoxEmail);
+            this.Controls.Add(this.textBoxTelepon);
+            this.Controls.Add(this.textBoxAlamat);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.radioButton4);
             this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.textBoxAgama);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxTempatLahir);
+            this.Controls.Add(this.textBoxNama);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -375,6 +450,10 @@
             this.Name = "LamarPekerjaan";
             this.Text = "LamarPekerjaan";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -384,26 +463,25 @@
 
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBoxFoto;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBoxPendidikan;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.TextBox textBoxTelepon;
+        private System.Windows.Forms.TextBox textBoxAlamat;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxAgama;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxTempatLahir;
+        private System.Windows.Forms.TextBox textBoxNama;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -413,5 +491,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton radioButton8;
+        private System.Windows.Forms.RadioButton radioButton7;
+        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.RadioButton radioButton9;
     }
 }

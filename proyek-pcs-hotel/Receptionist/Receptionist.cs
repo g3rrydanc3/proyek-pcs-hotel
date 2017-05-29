@@ -178,5 +178,13 @@ namespace proyek_pcs_hotel
             refreshComboBoxTipe();
             refreshKamar();
         }
+
+        private void messageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Message f = new Message();
+            f.conn = this.conn;
+            f.divisi = 1;
+            f.ShowDialog();
+        }
     }
 }
