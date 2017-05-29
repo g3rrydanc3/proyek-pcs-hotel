@@ -92,6 +92,12 @@
     <Compile Include="HRD\HRD.Designer.cs">
       <DependentUpon>HRD.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inbox.Designer.cs">
+      <DependentUpon>Inbox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Receptionist\Receptionist_IsiKamar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HRD\HRD.resx">
       <DependentUpon>HRD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inbox.resx">
+      <DependentUpon>Inbox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Receptionist\Receptionist_IsiKamar.resx">
       <DependentUpon>Receptionist_IsiKamar.cs</DependentUpon>
