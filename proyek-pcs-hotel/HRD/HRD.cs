@@ -62,6 +62,9 @@ namespace proyek_pcs_hotel
                 }
                 if (col.HeaderText == "GAJI")
                 {
+                    Font font = new Font(dataGridViewPenggajian.Font, FontStyle.Bold);
+                    col.HeaderCell.Style.Font = font;
+                    col.DefaultCellStyle.Font = font;
                     col.ReadOnly = false;
                 }
             }
@@ -117,7 +120,8 @@ namespace proyek_pcs_hotel
             cmd.Parameters.Add(":b", dataGridViewPenggajian.Rows[e.RowIndex].Cells[0].Value);
             cmd.ExecuteNonQuery();
 
-            refreshPenggajian();
+            MethodInvoker invoker = () => refreshPenggajian();
+            BeginInvoke(invoker);
         }
     }
 }
