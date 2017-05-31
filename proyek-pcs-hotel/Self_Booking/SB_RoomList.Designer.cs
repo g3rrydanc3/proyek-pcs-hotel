@@ -66,10 +66,10 @@
             // buttonBook
             // 
             this.buttonBook.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonBook.Location = new System.Drawing.Point(530, 35);
+            this.buttonBook.Location = new System.Drawing.Point(532, 35);
             this.buttonBook.Name = "buttonBook";
             this.tableLayoutPanel1.SetRowSpan(this.buttonBook, 2);
-            this.buttonBook.Size = new System.Drawing.Size(67, 162);
+            this.buttonBook.Size = new System.Drawing.Size(65, 162);
             this.buttonBook.TabIndex = 0;
             this.buttonBook.Text = "Book";
             this.buttonBook.UseVisualStyleBackColor = true;
@@ -81,7 +81,7 @@
             this.labelRoom.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRoom.Location = new System.Drawing.Point(3, 0);
             this.labelRoom.Name = "labelRoom";
-            this.labelRoom.Size = new System.Drawing.Size(160, 32);
+            this.labelRoom.Size = new System.Drawing.Size(157, 32);
             this.labelRoom.TabIndex = 1;
             this.labelRoom.Text = "Room";
             // 
@@ -91,7 +91,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(3, 35);
             this.pictureBox1.Name = "pictureBox1";
             this.tableLayoutPanel1.SetRowSpan(this.pictureBox1, 2);
-            this.pictureBox1.Size = new System.Drawing.Size(160, 162);
+            this.pictureBox1.Size = new System.Drawing.Size(157, 162);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
@@ -99,27 +99,27 @@
             // 
             this.labelDesc.AutoSize = true;
             this.labelDesc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelDesc.Location = new System.Drawing.Point(169, 32);
+            this.labelDesc.Location = new System.Drawing.Point(166, 32);
             this.labelDesc.Name = "labelDesc";
             this.tableLayoutPanel1.SetRowSpan(this.labelDesc, 2);
-            this.labelDesc.Size = new System.Drawing.Size(232, 168);
+            this.labelDesc.Size = new System.Drawing.Size(228, 168);
             this.labelDesc.TabIndex = 3;
             this.labelDesc.Text = resources.GetString("labelDesc.Text");
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(407, 32);
+            this.label1.Location = new System.Drawing.Point(400, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 21);
+            this.label1.Size = new System.Drawing.Size(126, 21);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Harga";
+            this.label1.Text = "Harga mulai dari";
             // 
             // labelHarga
             // 
             this.labelHarga.AutoSize = true;
             this.labelHarga.Font = new System.Drawing.Font("Segoe UI Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHarga.Location = new System.Drawing.Point(407, 72);
+            this.labelHarga.Location = new System.Drawing.Point(400, 72);
             this.labelHarga.Name = "labelHarga";
             this.labelHarga.Size = new System.Drawing.Size(117, 32);
             this.labelHarga.TabIndex = 5;
@@ -149,6 +149,6 @@
         public System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Label labelDesc;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label labelHarga;
+        public System.Windows.Forms.Label labelHarga;
     }
 }
