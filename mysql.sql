@@ -9,14 +9,30 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
+-- Table `tipe_kamar`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `tipe_kamar` (
+  `TIPE_KAMAR` VARCHAR(45) NOT NULL,
+  `DESKRIPSI` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`TIPE_KAMAR`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
 -- Table `kamar`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `kamar` (
   `KODE_KAMAR` INT NOT NULL,
-  `TIPE_KAMAR` VARCHAR(20) NOT NULL,
+  `TIPE_KAMAR` VARCHAR(45) NOT NULL,
   `CATATAN` VARCHAR(45) NULL,
   `HARGA_KAMAR` INT NOT NULL,
-  PRIMARY KEY (`KODE_KAMAR`))
+  PRIMARY KEY (`KODE_KAMAR`),
+  INDEX `fk_kamar_tipe_kamar1_idx` (`TIPE_KAMAR` ASC),
+  CONSTRAINT `fk_kamar_tipe_kamar1`
+    FOREIGN KEY (`TIPE_KAMAR`)
+    REFERENCES `tipe_kamar` (`TIPE_KAMAR`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 
@@ -262,6 +278,17 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+-- -----------------------------------------------------
+-- Data for table `tipe_kamar`
+-- -----------------------------------------------------
+START TRANSACTION;
+INSERT INTO `tipe_kamar` (`TIPE_KAMAR`, `DESKRIPSI`) VALUES ('Standart', 'DESKRIPSI STANDART');
+INSERT INTO `tipe_kamar` (`TIPE_KAMAR`, `DESKRIPSI`) VALUES ('Triple', 'DESKRIPSI TRIPLE');
+INSERT INTO `tipe_kamar` (`TIPE_KAMAR`, `DESKRIPSI`) VALUES ('Suite', 'DESKRIPSI SUITE');
+
+COMMIT;
+
 
 -- -----------------------------------------------------
 -- Data for table `kamar`

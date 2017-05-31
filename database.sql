@@ -16,14 +16,29 @@ DROP TABLE "PELAMAR" CASCADE CONSTRAINTS;
 purge recyclebin;
 
 -- -----------------------------------------------------
+-- Table `tipe_kamar`
+-- -----------------------------------------------------
+CREATE TABLE tipe_kamar (
+  TIPE_KAMAR VARCHAR2(45) NOT NULL,
+  DESKRIPSI VARCHAR2(100) NOT NULL,
+  PRIMARY KEY (TIPE_KAMAR))
+;
+
+
+-- -----------------------------------------------------
 -- Table `kamar`
 -- -----------------------------------------------------
 CREATE TABLE kamar (
-  KODE_KAMAR NUMBER NOT NULL,
-  TIPE_KAMAR VARCHAR2(20) NOT NULL,
+  KODE_KAMAR NUMBER(10) NOT NULL,
+  TIPE_KAMAR VARCHAR2(45) NOT NULL,
   CATATAN VARCHAR2(45) NULL,
-  HARGA_KAMAR NUMBER NOT NULL,
-  PRIMARY KEY (KODE_KAMAR))
+  HARGA_KAMAR NUMBER(10) NOT NULL,
+  PRIMARY KEY (KODE_KAMAR)
+ ,
+  CONSTRAINT fk_kamar_tipe_kamar1
+    FOREIGN KEY (TIPE_KAMAR)
+    REFERENCES tipe_kamar (TIPE_KAMAR)
+   )
 ;
 
 -- -----------------------------------------------------
@@ -231,6 +246,13 @@ CREATE TABLE message (
    )
 ;
 
+
+-- -----------------------------------------------------
+-- Data for table `tipe_kamar`
+-- -----------------------------------------------------
+INSERT INTO tipe_kamar (TIPE_KAMAR, DESKRIPSI) VALUES ('Standart', 'DESKRIPSI STANDART');
+INSERT INTO tipe_kamar (TIPE_KAMAR, DESKRIPSI) VALUES ('Triple', 'DESKRIPSI TRIPLE');
+INSERT INTO tipe_kamar (TIPE_KAMAR, DESKRIPSI) VALUES ('Suite', 'DESKRIPSI SUITE');
 
 -- -----------------------------------------------------
 -- Data for table `kamar`
