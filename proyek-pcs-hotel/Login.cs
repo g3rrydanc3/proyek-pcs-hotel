@@ -102,7 +102,7 @@ namespace proyek_pcs_hotel
                 if (textBox1.Text == "admin" && textBox2.Text == "admin")
                 {
                     Laporan f = new Laporan();
-                    //f.conn = conn;
+                    f.conn = conn;
                     f.Closed += (s, args) => this.Close();
                     this.Hide();
                     f.Show();
@@ -136,7 +136,7 @@ namespace proyek_pcs_hotel
             if (mode == "Self_Booking")
             {
                 SB f = new SB();
-                //f.conn = conn;
+                f.conn = conn;
                 f.Closed += (s, args) => this.Close();
                 this.Hide();
                 f.Show();
