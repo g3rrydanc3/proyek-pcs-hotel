@@ -25,6 +25,19 @@ namespace proyek_pcs_hotel
         public LamarPekerjaan()
         {
             InitializeComponent();
+
+            if (!Directory.Exists(appPath))
+            {
+                try
+                {
+                    DirectoryInfo di = Directory.CreateDirectory(appPath);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    throw;
+                }
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -146,12 +159,10 @@ namespace proyek_pcs_hotel
                     {
                         cmd.Parameters.Add(":m", 4);
                     }
-                    MessageBox.Show(urutan.ToString());
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Selamat! Anda berhasil melamar pekerjaan");
                     File.Copy(fileLocation, appPath + fileSimpan);
-
-
+                    MessageBox.Show("Selamat! Anda berhasil melamar pekerjaan");
+                    
                     /**string smtpAddress = "smtp.gmail.com";
                     int portNumber = 587;
                     bool enableSSL = true;
