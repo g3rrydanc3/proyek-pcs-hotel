@@ -106,7 +106,6 @@ namespace proyek_pcs_hotel
 
         private void listBox1_DoubleClick(object sender, EventArgs e)
         {
-            button1.Visible = true;
             richTextBox1.Visible = true;
             OracleDataAdapter adap = new OracleDataAdapter("select * from message where kode_message = '" + kode[listBox1.SelectedIndex] + "'", conn);
             DataTable dt = new DataTable();
@@ -116,11 +115,6 @@ namespace proyek_pcs_hotel
                 richTextBox1.Text = dt.Rows[i].ItemArray[4].ToString() + ": \n" + dt.Rows[i].ItemArray[5].ToString();
             }
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }
