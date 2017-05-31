@@ -73,7 +73,6 @@ namespace proyek_pcs_hotel
             {
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    MessageBox.Show(dt.Rows[i].ItemArray[1].ToString());
                     if (checkBox1.Text == dt.Rows[i].ItemArray[1].ToString())
                     {
                         kodedivisi.Add(Convert.ToInt32(dt.Rows[i].ItemArray[0].ToString()));
@@ -127,10 +126,11 @@ namespace proyek_pcs_hotel
                 cmd.Parameters.Add(":a", urutan);
                 cmd.Parameters.Add(":b", divisi);
                 cmd.Parameters.Add(":c", kodedivisi[i]);
-                //cmd.Parameters.Add(":d", DateTime.Now.ToString("HH:mm:ss"));
                 cmd.Parameters.Add(":e", textBox1.Text);
                 cmd.Parameters.Add(":f", richTextBox1.Text);
                 cmd.ExecuteNonQuery();
+                //OracleCommand cmd = new OracleCommand("insert into message values(:a, :b, :c, CURRENT_TIMESTAMP, :e, :f)", conn);
+                
                 this.Close();
             }
         }

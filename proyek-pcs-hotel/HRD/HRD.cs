@@ -123,5 +123,13 @@ namespace proyek_pcs_hotel
             MethodInvoker invoker = () => refreshPenggajian();
             BeginInvoke(invoker);
         }
+
+        private void messageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Inbox f = new Inbox();
+            f.conn = this.conn;
+            f.divisi = 5;
+            f.ShowDialog();
+        }
     }
 }

@@ -273,5 +273,13 @@ namespace proyek_pcs_hotel
             };
             f.ShowDialog();
         }
+
+        private void messageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Inbox f = new Inbox();
+            f.conn = this.conn;
+            f.divisi = 2;
+            f.ShowDialog();
+        }
     }
 }

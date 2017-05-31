@@ -130,5 +130,13 @@ namespace proyek_pcs_hotel
             dataGridViewOrder.Rows.Clear();
             buttonSelesai.Enabled = false;
         }
+
+        private void messageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Inbox f = new Inbox();
+            f.conn = this.conn;
+            f.divisi = 4;
+            f.ShowDialog();
+        }
     }
 }

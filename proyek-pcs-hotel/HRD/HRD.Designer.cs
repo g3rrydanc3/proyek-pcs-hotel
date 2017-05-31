@@ -224,8 +224,9 @@
             // messageToolStripMenuItem
             // 
             this.messageToolStripMenuItem.Name = "messageToolStripMenuItem";
-            this.messageToolStripMenuItem.Size = new System.Drawing.Size(83, 25);
-            this.messageToolStripMenuItem.Text = "Message";
+            this.messageToolStripMenuItem.Size = new System.Drawing.Size(60, 25);
+            this.messageToolStripMenuItem.Text = "Inbox";
+            this.messageToolStripMenuItem.Click += new System.EventHandler(this.messageToolStripMenuItem_Click);
             // 
             // HRD
             // 

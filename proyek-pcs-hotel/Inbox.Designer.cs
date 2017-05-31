@@ -31,11 +31,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.newMessageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -53,6 +51,7 @@
             this.newMessageToolStripMenuItem.Name = "newMessageToolStripMenuItem";
             this.newMessageToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
             this.newMessageToolStripMenuItem.Text = "New Message";
+            this.newMessageToolStripMenuItem.Click += new System.EventHandler(this.newMessageToolStripMenuItem_Click);
             // 
             // listBox1
             // 
@@ -62,23 +61,17 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(130, 286);
             this.listBox1.TabIndex = 1;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(131, 25);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(301, 234);
-            this.dataGridView1.TabIndex = 2;
+            this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
             // 
             // richTextBox1
             // 
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Location = new System.Drawing.Point(131, 260);
+            this.richTextBox1.Location = new System.Drawing.Point(131, 25);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(301, 25);
+            this.richTextBox1.Size = new System.Drawing.Size(301, 260);
             this.richTextBox1.TabIndex = 3;
             this.richTextBox1.Text = "";
+            this.richTextBox1.Visible = false;
             // 
             // button1
             // 
@@ -87,8 +80,10 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
-            this.button1.Text = "Send";
+            this.button1.Text = "Balas";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Inbox
             // 
@@ -98,7 +93,6 @@
             this.ClientSize = new System.Drawing.Size(432, 312);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -107,7 +101,6 @@
             this.Load += new System.EventHandler(this.Inbox_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,7 +111,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem newMessageToolStripMenuItem;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button1;
     }

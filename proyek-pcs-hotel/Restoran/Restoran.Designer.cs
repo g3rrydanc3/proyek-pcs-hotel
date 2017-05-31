@@ -39,6 +39,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.numericUpDownDrink = new System.Windows.Forms.NumericUpDown();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
             this.numericUpDownFood = new System.Windows.Forms.NumericUpDown();
             this.buttonOrderFood = new System.Windows.Forms.Button();
@@ -46,11 +51,6 @@
             this.buttonDelete = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.messageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDrink)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -72,7 +72,7 @@
             this.dataGridViewFood.Name = "dataGridViewFood";
             this.dataGridViewFood.ReadOnly = true;
             this.dataGridViewFood.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewFood.Size = new System.Drawing.Size(281, 274);
+            this.dataGridViewFood.Size = new System.Drawing.Size(281, 203);
             this.dataGridViewFood.TabIndex = 4;
             this.dataGridViewFood.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewFood_CellClick);
             // 
@@ -82,7 +82,7 @@
             this.dataGridViewDrink.AllowUserToDeleteRows = false;
             this.dataGridViewDrink.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDrink.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewDrink.Location = new System.Drawing.Point(4, 445);
+            this.dataGridViewDrink.Location = new System.Drawing.Point(4, 359);
             this.dataGridViewDrink.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewDrink.MultiSelect = false;
             this.dataGridViewDrink.Name = "dataGridViewDrink";
@@ -96,11 +96,11 @@
             // buttonDineIn
             // 
             this.buttonDineIn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonDineIn.Location = new System.Drawing.Point(304, 693);
+            this.buttonDineIn.Location = new System.Drawing.Point(304, 607);
             this.buttonDineIn.Margin = new System.Windows.Forms.Padding(0);
             this.buttonDineIn.Name = "buttonDineIn";
             this.tableLayoutPanel1.SetRowSpan(this.buttonDineIn, 3);
-            this.buttonDineIn.Size = new System.Drawing.Size(289, 118);
+            this.buttonDineIn.Size = new System.Drawing.Size(289, 103);
             this.buttonDineIn.TabIndex = 0;
             this.buttonDineIn.Text = "Dine In";
             this.buttonDineIn.UseVisualStyleBackColor = true;
@@ -109,11 +109,11 @@
             // buttonTakeAway
             // 
             this.buttonTakeAway.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonTakeAway.Location = new System.Drawing.Point(593, 693);
+            this.buttonTakeAway.Location = new System.Drawing.Point(593, 607);
             this.buttonTakeAway.Margin = new System.Windows.Forms.Padding(0);
             this.buttonTakeAway.Name = "buttonTakeAway";
             this.tableLayoutPanel1.SetRowSpan(this.buttonTakeAway, 3);
-            this.buttonTakeAway.Size = new System.Drawing.Size(290, 118);
+            this.buttonTakeAway.Size = new System.Drawing.Size(290, 103);
             this.buttonTakeAway.TabIndex = 1;
             this.buttonTakeAway.Text = "Take Away";
             this.buttonTakeAway.UseVisualStyleBackColor = true;
@@ -158,7 +158,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.78814F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1176, 811);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1176, 710);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // label1
@@ -175,11 +175,11 @@
             // buttonDelivery
             // 
             this.buttonDelivery.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonDelivery.Location = new System.Drawing.Point(883, 693);
+            this.buttonDelivery.Location = new System.Drawing.Point(883, 607);
             this.buttonDelivery.Margin = new System.Windows.Forms.Padding(0);
             this.buttonDelivery.Name = "buttonDelivery";
             this.tableLayoutPanel1.SetRowSpan(this.buttonDelivery, 3);
-            this.buttonDelivery.Size = new System.Drawing.Size(293, 118);
+            this.buttonDelivery.Size = new System.Drawing.Size(293, 103);
             this.buttonDelivery.TabIndex = 2;
             this.buttonDelivery.Text = "Delivery To Room";
             this.buttonDelivery.UseVisualStyleBackColor = true;
@@ -189,10 +189,10 @@
             // 
             this.buttonOrderDrink.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonOrderDrink.Enabled = false;
-            this.buttonOrderDrink.Location = new System.Drawing.Point(4, 755);
+            this.buttonOrderDrink.Location = new System.Drawing.Point(4, 669);
             this.buttonOrderDrink.Margin = new System.Windows.Forms.Padding(4);
             this.buttonOrderDrink.Name = "buttonOrderDrink";
-            this.buttonOrderDrink.Size = new System.Drawing.Size(281, 52);
+            this.buttonOrderDrink.Size = new System.Drawing.Size(281, 37);
             this.buttonOrderDrink.TabIndex = 10;
             this.buttonOrderDrink.Text = "Order Drink";
             this.buttonOrderDrink.UseVisualStyleBackColor = true;
@@ -202,7 +202,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(4, 693);
+            this.label3.Location = new System.Drawing.Point(4, 607);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(281, 21);
@@ -212,7 +212,7 @@
             // numericUpDownDrink
             // 
             this.numericUpDownDrink.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDownDrink.Location = new System.Drawing.Point(4, 718);
+            this.numericUpDownDrink.Location = new System.Drawing.Point(4, 632);
             this.numericUpDownDrink.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDownDrink.Minimum = new decimal(new int[] {
             1,
@@ -248,95 +248,9 @@
             this.dataGridView3.Name = "dataGridView3";
             this.tableLayoutPanel1.SetRowSpan(this.dataGridView3, 7);
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView3.Size = new System.Drawing.Size(864, 608);
+            this.dataGridView3.Size = new System.Drawing.Size(864, 522);
             this.dataGridView3.TabIndex = 7;
             this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Location = new System.Drawing.Point(4, 303);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(281, 21);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Quantity Food";
-            // 
-            // numericUpDownFood
-            // 
-            this.numericUpDownFood.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDownFood.Location = new System.Drawing.Point(4, 328);
-            this.numericUpDownFood.Margin = new System.Windows.Forms.Padding(4);
-            this.numericUpDownFood.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDownFood.Name = "numericUpDownFood";
-            this.numericUpDownFood.Size = new System.Drawing.Size(281, 29);
-            this.numericUpDownFood.TabIndex = 12;
-            this.numericUpDownFood.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // buttonOrderFood
-            // 
-            this.buttonOrderFood.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonOrderFood.Enabled = false;
-            this.buttonOrderFood.Location = new System.Drawing.Point(4, 365);
-            this.buttonOrderFood.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonOrderFood.Name = "buttonOrderFood";
-            this.buttonOrderFood.Size = new System.Drawing.Size(281, 51);
-            this.buttonOrderFood.TabIndex = 13;
-            this.buttonOrderFood.Text = "Order Food";
-            this.buttonOrderFood.UseVisualStyleBackColor = true;
-            this.buttonOrderFood.Click += new System.EventHandler(this.buttonOrderFood_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(4, 420);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(281, 21);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Drink";
-            // 
-            // buttonDelete
-            // 
-            this.buttonDelete.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonDelete.Enabled = false;
-            this.buttonDelete.Location = new System.Drawing.Point(887, 620);
-            this.buttonDelete.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(285, 69);
-            this.buttonDelete.TabIndex = 14;
-            this.buttonDelete.Text = "Delete";
-            this.buttonDelete.UseVisualStyleBackColor = true;
-            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.messageToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1176, 31);
-            this.menuStrip1.TabIndex = 4;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // messageToolStripMenuItem
-            // 
-            this.messageToolStripMenuItem.Name = "messageToolStripMenuItem";
-            this.messageToolStripMenuItem.Size = new System.Drawing.Size(83, 25);
-            this.messageToolStripMenuItem.Text = "Message";
             // 
             // Column1
             // 
@@ -372,12 +286,99 @@
             this.Column4.Name = "Column4";
             this.Column4.Width = 47;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Location = new System.Drawing.Point(4, 232);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(281, 21);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Quantity Food";
+            // 
+            // numericUpDownFood
+            // 
+            this.numericUpDownFood.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numericUpDownFood.Location = new System.Drawing.Point(4, 257);
+            this.numericUpDownFood.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDownFood.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownFood.Name = "numericUpDownFood";
+            this.numericUpDownFood.Size = new System.Drawing.Size(281, 29);
+            this.numericUpDownFood.TabIndex = 12;
+            this.numericUpDownFood.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // buttonOrderFood
+            // 
+            this.buttonOrderFood.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonOrderFood.Enabled = false;
+            this.buttonOrderFood.Location = new System.Drawing.Point(4, 294);
+            this.buttonOrderFood.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonOrderFood.Name = "buttonOrderFood";
+            this.buttonOrderFood.Size = new System.Drawing.Size(281, 36);
+            this.buttonOrderFood.TabIndex = 13;
+            this.buttonOrderFood.Text = "Order Food";
+            this.buttonOrderFood.UseVisualStyleBackColor = true;
+            this.buttonOrderFood.Click += new System.EventHandler(this.buttonOrderFood_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Location = new System.Drawing.Point(4, 334);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(281, 21);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Drink";
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonDelete.Enabled = false;
+            this.buttonDelete.Location = new System.Drawing.Point(887, 534);
+            this.buttonDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(285, 69);
+            this.buttonDelete.TabIndex = 14;
+            this.buttonDelete.Text = "Delete";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.messageToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(1176, 31);
+            this.menuStrip1.TabIndex = 4;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // messageToolStripMenuItem
+            // 
+            this.messageToolStripMenuItem.Name = "messageToolStripMenuItem";
+            this.messageToolStripMenuItem.Size = new System.Drawing.Size(60, 25);
+            this.messageToolStripMenuItem.Text = "Inbox";
+            this.messageToolStripMenuItem.Click += new System.EventHandler(this.messageToolStripMenuItem_Click);
+            // 
             // Restoran
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1176, 842);
+            this.ClientSize = new System.Drawing.Size(1176, 741);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
