@@ -171,23 +171,23 @@
     <Compile Include="Self_Booking\SB.Designer.cs">
       <DependentUpon>SB.cs</DependentUpon>
     </Compile>
-    <Compile Include="Self_Booking\SB_1.cs">
+    <Compile Include="Self_Booking\SB_1%28Date%29.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Self_Booking\SB_1.Designer.cs">
-      <DependentUpon>SB_1.cs</DependentUpon>
+    <Compile Include="Self_Booking\SB_1%28Date%29.Designer.cs">
+      <DependentUpon>SB_1%28Date%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="Self_Booking\SB_2.cs">
+    <Compile Include="Self_Booking\SB_2%28Room%29.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Self_Booking\SB_2.Designer.cs">
-      <DependentUpon>SB_2.cs</DependentUpon>
+    <Compile Include="Self_Booking\SB_2%28Room%29.Designer.cs">
+      <DependentUpon>SB_2%28Room%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="Self_Booking\SB_3.cs">
+    <Compile Include="Self_Booking\SB_3%28Data%29.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Self_Booking\SB_3.Designer.cs">
-      <DependentUpon>SB_3.cs</DependentUpon>
+    <Compile Include="Self_Booking\SB_3%28Data%29.Designer.cs">
+      <DependentUpon>SB_3%28Data%29.cs</DependentUpon>
     </Compile>
     <Compile Include="Self_Booking\SB_RoomList.cs">
       <SubType>UserControl</SubType>
@@ -254,14 +254,14 @@
     <EmbeddedResource Include="Self_Booking\SB.resx">
       <DependentUpon>SB.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Self_Booking\SB_1.resx">
-      <DependentUpon>SB_1.cs</DependentUpon>
+    <EmbeddedResource Include="Self_Booking\SB_1%28Date%29.resx">
+      <DependentUpon>SB_1%28Date%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Self_Booking\SB_2.resx">
-      <DependentUpon>SB_2.cs</DependentUpon>
+    <EmbeddedResource Include="Self_Booking\SB_2%28Room%29.resx">
+      <DependentUpon>SB_2%28Room%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Self_Booking\SB_3.resx">
-      <DependentUpon>SB_3.cs</DependentUpon>
+    <EmbeddedResource Include="Self_Booking\SB_3%28Data%29.resx">
+      <DependentUpon>SB_3%28Data%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Self_Booking\SB_RoomList.resx">
       <DependentUpon>SB_RoomList.cs</DependentUpon>
