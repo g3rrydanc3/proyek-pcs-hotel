@@ -39,7 +39,6 @@ namespace proyek_pcs_hotel
                 textBoxFoto.Text = fileLocation;
                 fileName = openFileDialog1.SafeFileName;
                 pictureBox1.ImageLocation = fileLocation;
-                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             }
         }
 
