@@ -92,6 +92,12 @@
     <Compile Include="HRD\HRD.Designer.cs">
       <DependentUpon>HRD.cs</DependentUpon>
     </Compile>
+    <Compile Include="HRD\HRD_DataPelamar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HRD\HRD_DataPelamar.Designer.cs">
+      <DependentUpon>HRD_DataPelamar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inbox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HRD\HRD.resx">
       <DependentUpon>HRD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRD\HRD_DataPelamar.resx">
+      <DependentUpon>HRD_DataPelamar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inbox.resx">
       <DependentUpon>Inbox.cs</DependentUpon>

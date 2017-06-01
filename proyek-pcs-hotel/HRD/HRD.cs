@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -78,10 +79,26 @@ namespace proyek_pcs_hotel
             }
         }
 
+        private void refreshPelamar()
+        {
+            OracleCommand cmd = new OracleCommand(@"select p.kode_pelamar , p.nama, p.kotalahir, p.jk_pelamar, p.pendidikan_pelamar, d.nama_divisi ""DIVISI DIINGINKAN"" from pelamar p ,pegawai_divisi d where p.kode_divisi = d.kode_divisi", conn);
+            OracleDataAdapter adap = new OracleDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            adap.Fill(dt);
+            dataGridViewPelamar.DataSource = dt;
+
+            foreach (DataGridViewColumn col in dataGridViewPelamar.Columns)
+            {
+                col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                col.ReadOnly = true;
+            }
+        }
+
         private void HRD_Load(object sender, EventArgs e)
         {
             refreshKaryawan();
             refreshPenggajian();
+            refreshPelamar();
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -129,6 +146,34 @@ namespace proyek_pcs_hotel
             Inbox f = new Inbox();
             f.conn = this.conn;
             f.divisi = 5;
+            f.ShowDialog();
+        }
+
+        private void dataGridViewPelamar_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            HRD_DataPelamar f = new HRD_DataPelamar();
+            OracleCommand cmd = new OracleCommand("select * from pelamar where kode_pelamar = :a", conn);
+            cmd.Parameters.Add(":a", Convert.ToInt32(dataGridViewPelamar.Rows[e.RowIndex].Cells[0].Value.ToString()));
+            OracleDataReader res = cmd.ExecuteReader();
+            while (res.Read())
+            {
+                f.labelKode.Text = res.GetDecimal(0).ToString();
+                f.labelNama.Text = res.GetString(1);
+                f.labelKota.Text = res.GetString(2);
+                f.labelTgl.Text = res.GetDateTime(3).ToString("dd-MM-yy");
+                f.labelJK.Text = res.GetString(4);
+                f.labelAgama.Text = res.GetString(5);
+                f.labelWNI.Text = res.GetString(6);
+                f.labelMenikah.Text = res.GetString(7);
+                f.labelPendidikan.Text = res.GetString(8);
+                f.labelAlamat.Text = res.GetString(9);
+                f.labelTelepon.Text = res.GetString(10);
+                f.labelEmail.Text = res.GetString(11);
+                f.pictureBox1.ImageLocation = Path.GetDirectoryName(Application.ExecutablePath) + @"\Pictures\" + res.GetString(12);
+                cmd = new OracleCommand("select nama_divisi from pegawai_divisi where kode_divisi = :a", conn);
+                cmd.Parameters.Add(":a", res.GetDecimal(13));
+                f.labelDivisi.Text = cmd.ExecuteScalar().ToString();
+            }
             f.ShowDialog();
         }
     }

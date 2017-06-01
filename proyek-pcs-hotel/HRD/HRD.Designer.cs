@@ -41,6 +41,7 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.messageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridViewPelamar = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -48,7 +49,9 @@
             this.tabPage2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPenggajian)).BeginInit();
+            this.tabPage3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPelamar)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -199,6 +202,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.dataGridViewPelamar);
             this.tabPage3.Location = new System.Drawing.Point(4, 30);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
@@ -228,6 +232,22 @@
             this.messageToolStripMenuItem.Text = "Inbox";
             this.messageToolStripMenuItem.Click += new System.EventHandler(this.messageToolStripMenuItem_Click);
             // 
+            // dataGridViewPelamar
+            // 
+            this.dataGridViewPelamar.AllowUserToAddRows = false;
+            this.dataGridViewPelamar.AllowUserToDeleteRows = false;
+            this.dataGridViewPelamar.AllowUserToOrderColumns = true;
+            this.dataGridViewPelamar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPelamar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewPelamar.Location = new System.Drawing.Point(4, 4);
+            this.dataGridViewPelamar.MultiSelect = false;
+            this.dataGridViewPelamar.Name = "dataGridViewPelamar";
+            this.dataGridViewPelamar.ReadOnly = true;
+            this.dataGridViewPelamar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewPelamar.Size = new System.Drawing.Size(1048, 421);
+            this.dataGridViewPelamar.TabIndex = 0;
+            this.dataGridViewPelamar.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPelamar_CellDoubleClick);
+            // 
             // HRD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -250,8 +270,10 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPenggajian)).EndInit();
+            this.tabPage3.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPelamar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,5 +294,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem messageToolStripMenuItem;
+        private System.Windows.Forms.DataGridView dataGridViewPelamar;
     }
 }
