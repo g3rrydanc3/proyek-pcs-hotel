@@ -85,22 +85,14 @@ namespace proyek_pcs_hotel
             {
                 if (MessageBox.Show("Are you sure?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    OracleDataAdapter adap = new OracleDataAdapter("select max(kode_pelamar) from pelamar", conn);
-                    DataTable dt = new DataTable();
-                    adap.Fill(dt);
-                    if (dt.Rows[0].ItemArray[0].ToString() == "")
-                    {
-                        urutan = 1;
-                    }
-                    else
-                    {
-                        urutan = Convert.ToInt32(dt.Rows[0].ItemArray[0].ToString()) + 1;
-                    }
+                    OracleCommand cmd = new OracleCommand("select COALESCE(max(kode_pelamar), 0) from pelamar", conn);
+                    urutan = Convert.ToInt32(cmd.ExecuteScalar()) + 1;
+
                     String[] potong = fileName.Split('.');
                     int length = potong.Count()-1;
                     String fileSimpan = urutan + "." + potong[length];
 
-                    OracleCommand cmd = new OracleCommand("insert into pelamar values(:a, :b, :c, to_date(:d, 'DD-MM-YY'), :f, :e, :g, :h, :i, :j, :k, :l, :n, :m)", conn);
+                    cmd = new OracleCommand("insert into pelamar values(:a, :b, :c, to_date(:d, 'DD-MM-YY'), :f, :e, :g, :h, :i, :j, :k, :l, :n, :m)", conn);
                     cmd.Parameters.Add(":a", urutan);
                     cmd.Parameters.Add(":b", textBoxNama.Text);
                     cmd.Parameters.Add(":c", textBoxTempatLahir.Text);
