@@ -79,7 +79,7 @@ namespace proyek_pcs_hotel
             }
         }
 
-        private void refreshPelamar()
+        public void refreshPelamar()
         {
             OracleCommand cmd = new OracleCommand(@"select p.kode_pelamar , p.nama, p.kotalahir, p.jk_pelamar, p.pendidikan_pelamar, d.nama_divisi ""DIVISI DIINGINKAN"" from pelamar p ,pegawai_divisi d where p.kode_divisi = d.kode_divisi", conn);
             OracleDataAdapter adap = new OracleDataAdapter(cmd);
@@ -173,8 +173,17 @@ namespace proyek_pcs_hotel
                 cmd = new OracleCommand("select nama_divisi from pegawai_divisi where kode_divisi = :a", conn);
                 cmd.Parameters.Add(":a", res.GetDecimal(13));
                 f.labelDivisi.Text = cmd.ExecuteScalar().ToString();
+                f.conn = conn;
+                f.ff = this;
             }
             f.ShowDialog();
+        }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainMenu a = new MainMenu();
+            a.Show();
         }
     }
 }

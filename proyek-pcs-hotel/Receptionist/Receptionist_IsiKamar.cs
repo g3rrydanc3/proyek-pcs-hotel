@@ -14,7 +14,7 @@ namespace proyek_pcs_hotel
     public partial class Receptionist_IsiKamar : Form
     {
         public OracleConnection conn;
-        public String tanggal;
+        public DateTime tanggal;
         public String tipe;
 
         public Receptionist_IsiKamar()
@@ -54,16 +54,15 @@ namespace proyek_pcs_hotel
             cmd.Parameters.Add(":b", textBox1.Text);
             cmd.Parameters.Add(":c", textBox2.Text);
             cmd.ExecuteNonQuery();
-            cmd = new OracleCommand("insert into hotel_djual values(:d, :e, :f, :g)", conn);
+            cmd = new OracleCommand("insert into hotel_djual values(:d, :e, to_date(:f, 'dd-mm-yy'), to_date(:g, 'dd-mm-yy'))", conn);
             if (tipe == "pesan")
             {
-                tanggal = DateTime.Now.ToString().Substring(0,10);
+                tanggal = DateTime.Now;
             }
-            String temp = tanggal.Substring(0, 2);
-            String jangka = (Convert.ToInt32(temp) + Convert.ToInt32(numericUpDown1.Value)).ToString().PadLeft(2, '0') + tanggal.Substring(3, 7);
+            String jangka = tanggal.AddDays((double)numericUpDown1.Value).ToString("dd-MM-yy");
             cmd.Parameters.Add(":d", notahotel);
             cmd.Parameters.Add(":e", label4.Text);
-            cmd.Parameters.Add(":f", tanggal);
+            cmd.Parameters.Add(":f", tanggal.ToString("dd-MM-yy"));
             cmd.Parameters.Add(":g", jangka);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Booking/Pesan sukses");

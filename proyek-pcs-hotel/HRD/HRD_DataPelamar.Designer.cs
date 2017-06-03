@@ -55,6 +55,8 @@
             this.labelDivisi = new System.Windows.Forms.Label();
             this.labelKDivisi = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +65,7 @@
             this.labelKKode.AutoSize = true;
             this.labelKKode.Location = new System.Drawing.Point(12, 9);
             this.labelKKode.Name = "labelKKode";
-            this.labelKKode.Size = new System.Drawing.Size(45, 21);
+            this.labelKKode.Size = new System.Drawing.Size(69, 32);
             this.labelKKode.TabIndex = 1;
             this.labelKKode.Text = "Kode";
             // 
@@ -72,7 +74,7 @@
             this.labelKode.AutoSize = true;
             this.labelKode.Location = new System.Drawing.Point(167, 9);
             this.labelKode.Name = "labelKode";
-            this.labelKode.Size = new System.Drawing.Size(52, 21);
+            this.labelKode.Size = new System.Drawing.Size(79, 32);
             this.labelKode.TabIndex = 2;
             this.labelKode.Text = "label2";
             // 
@@ -81,7 +83,7 @@
             this.labelKNama.AutoSize = true;
             this.labelKNama.Location = new System.Drawing.Point(12, 51);
             this.labelKNama.Name = "labelKNama";
-            this.labelKNama.Size = new System.Drawing.Size(52, 21);
+            this.labelKNama.Size = new System.Drawing.Size(78, 32);
             this.labelKNama.TabIndex = 3;
             this.labelKNama.Text = "Nama";
             // 
@@ -90,7 +92,7 @@
             this.labelNama.AutoSize = true;
             this.labelNama.Location = new System.Drawing.Point(167, 51);
             this.labelNama.Name = "labelNama";
-            this.labelNama.Size = new System.Drawing.Size(52, 21);
+            this.labelNama.Size = new System.Drawing.Size(79, 32);
             this.labelNama.TabIndex = 4;
             this.labelNama.Text = "label4";
             // 
@@ -99,7 +101,7 @@
             this.labelTgl.AutoSize = true;
             this.labelTgl.Location = new System.Drawing.Point(167, 143);
             this.labelTgl.Name = "labelTgl";
-            this.labelTgl.Size = new System.Drawing.Size(52, 21);
+            this.labelTgl.Size = new System.Drawing.Size(79, 32);
             this.labelTgl.TabIndex = 8;
             this.labelTgl.Text = "label5";
             // 
@@ -108,7 +110,7 @@
             this.labelKTgl.AutoSize = true;
             this.labelKTgl.Location = new System.Drawing.Point(12, 143);
             this.labelKTgl.Name = "labelKTgl";
-            this.labelKTgl.Size = new System.Drawing.Size(102, 21);
+            this.labelKTgl.Size = new System.Drawing.Size(155, 32);
             this.labelKTgl.TabIndex = 7;
             this.labelKTgl.Text = "Tanggal Lahir";
             // 
@@ -117,7 +119,7 @@
             this.labelKota.AutoSize = true;
             this.labelKota.Location = new System.Drawing.Point(167, 101);
             this.labelKota.Name = "labelKota";
-            this.labelKota.Size = new System.Drawing.Size(52, 21);
+            this.labelKota.Size = new System.Drawing.Size(79, 32);
             this.labelKota.TabIndex = 6;
             this.labelKota.Text = "label7";
             // 
@@ -126,7 +128,7 @@
             this.labelKKota.AutoSize = true;
             this.labelKKota.Location = new System.Drawing.Point(12, 101);
             this.labelKKota.Name = "labelKKota";
-            this.labelKKota.Size = new System.Drawing.Size(80, 21);
+            this.labelKKota.Size = new System.Drawing.Size(120, 32);
             this.labelKKota.TabIndex = 5;
             this.labelKKota.Text = "Kota Lahir";
             // 
@@ -135,7 +137,7 @@
             this.labelAgama.AutoSize = true;
             this.labelAgama.Location = new System.Drawing.Point(167, 240);
             this.labelAgama.Name = "labelAgama";
-            this.labelAgama.Size = new System.Drawing.Size(52, 21);
+            this.labelAgama.Size = new System.Drawing.Size(79, 32);
             this.labelAgama.TabIndex = 12;
             this.labelAgama.Text = "label9";
             // 
@@ -144,7 +146,7 @@
             this.labelKWNI.AutoSize = true;
             this.labelKWNI.Location = new System.Drawing.Point(12, 240);
             this.labelKWNI.Name = "labelKWNI";
-            this.labelKWNI.Size = new System.Drawing.Size(59, 21);
+            this.labelKWNI.Size = new System.Drawing.Size(89, 32);
             this.labelKWNI.TabIndex = 11;
             this.labelKWNI.Text = "Agama";
             // 
@@ -153,7 +155,7 @@
             this.labelJK.AutoSize = true;
             this.labelJK.Location = new System.Drawing.Point(167, 198);
             this.labelJK.Name = "labelJK";
-            this.labelJK.Size = new System.Drawing.Size(61, 21);
+            this.labelJK.Size = new System.Drawing.Size(92, 32);
             this.labelJK.TabIndex = 10;
             this.labelJK.Text = "label11";
             // 
@@ -162,7 +164,7 @@
             this.labelKAgama.AutoSize = true;
             this.labelKAgama.Location = new System.Drawing.Point(12, 198);
             this.labelKAgama.Name = "labelKAgama";
-            this.labelKAgama.Size = new System.Drawing.Size(104, 21);
+            this.labelKAgama.Size = new System.Drawing.Size(160, 32);
             this.labelKAgama.TabIndex = 9;
             this.labelKAgama.Text = "Jenis Kelamin";
             // 
@@ -171,7 +173,7 @@
             this.labelMenikah.AutoSize = true;
             this.labelMenikah.Location = new System.Drawing.Point(167, 322);
             this.labelMenikah.Name = "labelMenikah";
-            this.labelMenikah.Size = new System.Drawing.Size(61, 21);
+            this.labelMenikah.Size = new System.Drawing.Size(92, 32);
             this.labelMenikah.TabIndex = 16;
             this.labelMenikah.Text = "label13";
             // 
@@ -180,7 +182,7 @@
             this.labelKPendidikan.AutoSize = true;
             this.labelKPendidikan.Location = new System.Drawing.Point(12, 322);
             this.labelKPendidikan.Name = "labelKPendidikan";
-            this.labelKPendidikan.Size = new System.Drawing.Size(70, 21);
+            this.labelKPendidikan.Size = new System.Drawing.Size(108, 32);
             this.labelKPendidikan.TabIndex = 15;
             this.labelKPendidikan.Text = "Menikah";
             // 
@@ -189,7 +191,7 @@
             this.labelWNI.AutoSize = true;
             this.labelWNI.Location = new System.Drawing.Point(167, 280);
             this.labelWNI.Name = "labelWNI";
-            this.labelWNI.Size = new System.Drawing.Size(61, 21);
+            this.labelWNI.Size = new System.Drawing.Size(92, 32);
             this.labelWNI.TabIndex = 14;
             this.labelWNI.Text = "label15";
             // 
@@ -198,7 +200,7 @@
             this.labelKMenikah.AutoSize = true;
             this.labelKMenikah.Location = new System.Drawing.Point(12, 280);
             this.labelKMenikah.Name = "labelKMenikah";
-            this.labelKMenikah.Size = new System.Drawing.Size(41, 21);
+            this.labelKMenikah.Size = new System.Drawing.Size(61, 32);
             this.labelKMenikah.TabIndex = 13;
             this.labelKMenikah.Text = "WNI";
             // 
@@ -207,7 +209,7 @@
             this.labelAlamat.AutoSize = true;
             this.labelAlamat.Location = new System.Drawing.Point(167, 408);
             this.labelAlamat.Name = "labelAlamat";
-            this.labelAlamat.Size = new System.Drawing.Size(61, 21);
+            this.labelAlamat.Size = new System.Drawing.Size(92, 32);
             this.labelAlamat.TabIndex = 20;
             this.labelAlamat.Text = "label17";
             // 
@@ -216,7 +218,7 @@
             this.labelKTelepon.AutoSize = true;
             this.labelKTelepon.Location = new System.Drawing.Point(12, 408);
             this.labelKTelepon.Name = "labelKTelepon";
-            this.labelKTelepon.Size = new System.Drawing.Size(59, 21);
+            this.labelKTelepon.Size = new System.Drawing.Size(89, 32);
             this.labelKTelepon.TabIndex = 19;
             this.labelKTelepon.Text = "Alamat";
             // 
@@ -225,7 +227,7 @@
             this.labelPendidikan.AutoSize = true;
             this.labelPendidikan.Location = new System.Drawing.Point(167, 366);
             this.labelPendidikan.Name = "labelPendidikan";
-            this.labelPendidikan.Size = new System.Drawing.Size(61, 21);
+            this.labelPendidikan.Size = new System.Drawing.Size(92, 32);
             this.labelPendidikan.TabIndex = 18;
             this.labelPendidikan.Text = "label19";
             // 
@@ -234,7 +236,7 @@
             this.labelKAlamat.AutoSize = true;
             this.labelKAlamat.Location = new System.Drawing.Point(12, 366);
             this.labelKAlamat.Name = "labelKAlamat";
-            this.labelKAlamat.Size = new System.Drawing.Size(86, 21);
+            this.labelKAlamat.Size = new System.Drawing.Size(132, 32);
             this.labelKAlamat.TabIndex = 17;
             this.labelKAlamat.Text = "Pendidikan";
             // 
@@ -243,7 +245,7 @@
             this.labelEmail.AutoSize = true;
             this.labelEmail.Location = new System.Drawing.Point(167, 492);
             this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(61, 21);
+            this.labelEmail.Size = new System.Drawing.Size(92, 32);
             this.labelEmail.TabIndex = 24;
             this.labelEmail.Text = "label21";
             // 
@@ -252,7 +254,7 @@
             this.labelKFoto.AutoSize = true;
             this.labelKFoto.Location = new System.Drawing.Point(12, 492);
             this.labelKFoto.Name = "labelKFoto";
-            this.labelKFoto.Size = new System.Drawing.Size(48, 21);
+            this.labelKFoto.Size = new System.Drawing.Size(72, 32);
             this.labelKFoto.TabIndex = 23;
             this.labelKFoto.Text = "Email";
             // 
@@ -261,7 +263,7 @@
             this.labelTelepon.AutoSize = true;
             this.labelTelepon.Location = new System.Drawing.Point(167, 450);
             this.labelTelepon.Name = "labelTelepon";
-            this.labelTelepon.Size = new System.Drawing.Size(61, 21);
+            this.labelTelepon.Size = new System.Drawing.Size(92, 32);
             this.labelTelepon.TabIndex = 22;
             this.labelTelepon.Text = "label23";
             // 
@@ -270,7 +272,7 @@
             this.labelKEmail.AutoSize = true;
             this.labelKEmail.Location = new System.Drawing.Point(12, 450);
             this.labelKEmail.Name = "labelKEmail";
-            this.labelKEmail.Size = new System.Drawing.Size(63, 21);
+            this.labelKEmail.Size = new System.Drawing.Size(100, 32);
             this.labelKEmail.TabIndex = 21;
             this.labelKEmail.Text = "Telepon";
             // 
@@ -279,7 +281,7 @@
             this.labelDivisi.AutoSize = true;
             this.labelDivisi.Location = new System.Drawing.Point(167, 535);
             this.labelDivisi.Name = "labelDivisi";
-            this.labelDivisi.Size = new System.Drawing.Size(61, 21);
+            this.labelDivisi.Size = new System.Drawing.Size(92, 32);
             this.labelDivisi.TabIndex = 28;
             this.labelDivisi.Text = "label25";
             // 
@@ -288,7 +290,7 @@
             this.labelKDivisi.AutoSize = true;
             this.labelKDivisi.Location = new System.Drawing.Point(12, 535);
             this.labelKDivisi.Name = "labelKDivisi";
-            this.labelKDivisi.Size = new System.Drawing.Size(146, 21);
+            this.labelKDivisi.Size = new System.Drawing.Size(224, 32);
             this.labelKDivisi.TabIndex = 27;
             this.labelKDivisi.Text = "Divisi yg diinginkan";
             // 
@@ -301,11 +303,33 @@
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(173, 591);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(143, 42);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "Accept";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(338, 591);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(132, 42);
+            this.button2.TabIndex = 31;
+            this.button2.Text = "Delete";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // HRD_DataPelamar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(536, 613);
+            this.ClientSize = new System.Drawing.Size(536, 645);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.labelDivisi);
             this.Controls.Add(this.labelKDivisi);
@@ -338,6 +362,7 @@
             this.Name = "HRD_DataPelamar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Data Pelamar";
+            this.Load += new System.EventHandler(this.HRD_DataPelamar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -373,5 +398,7 @@
         public System.Windows.Forms.Label labelTelepon;
         public System.Windows.Forms.Label labelDivisi;
         public System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

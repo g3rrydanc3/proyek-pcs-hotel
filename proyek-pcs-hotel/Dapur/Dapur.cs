@@ -63,6 +63,11 @@ namespace proyek_pcs_hotel
             f.ShowDialog();
         }
 
-        
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainMenu a = new MainMenu();
+            a.Show();
+        }
     }
 }

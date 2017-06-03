@@ -40,6 +40,7 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.messageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -54,22 +55,22 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 25);
+            this.tabControl1.Location = new System.Drawing.Point(0, 35);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(777, 669);
+            this.tabControl1.Size = new System.Drawing.Size(777, 659);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.Click += new System.EventHandler(this.tabControl1_Click);
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.tableLayoutPanel1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 30);
+            this.tabPage1.Location = new System.Drawing.Point(4, 41);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(769, 635);
+            this.tabPage1.Size = new System.Drawing.Size(769, 614);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Booking";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -95,7 +96,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(761, 627);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(761, 606);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // label2
@@ -106,7 +107,7 @@
             this.label2.Location = new System.Drawing.Point(384, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(373, 21);
+            this.label2.Size = new System.Drawing.Size(373, 32);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tanggal : ";
             // 
@@ -118,7 +119,7 @@
             this.label1.Location = new System.Drawing.Point(4, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(372, 21);
+            this.label1.Size = new System.Drawing.Size(372, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tipe Kamar : ";
             // 
@@ -127,10 +128,10 @@
             this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(4, 25);
+            this.comboBox1.Location = new System.Drawing.Point(4, 36);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(372, 29);
+            this.comboBox1.Size = new System.Drawing.Size(372, 40);
             this.comboBox1.TabIndex = 3;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -144,7 +145,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableLayoutPanel1.SetColumnSpan(this.dataGridView1, 2);
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 62);
+            this.dataGridView1.Location = new System.Drawing.Point(4, 83);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
@@ -157,21 +158,21 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dateTimePicker1.Location = new System.Drawing.Point(384, 25);
+            this.dateTimePicker1.Location = new System.Drawing.Point(384, 36);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(373, 29);
+            this.dateTimePicker1.Size = new System.Drawing.Size(373, 39);
             this.dateTimePicker1.TabIndex = 7;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.dataGridView2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 30);
+            this.tabPage2.Location = new System.Drawing.Point(4, 41);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(769, 635);
+            this.tabPage2.Size = new System.Drawing.Size(769, 614);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "List";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -189,7 +190,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 28;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(761, 627);
+            this.dataGridView2.Size = new System.Drawing.Size(761, 606);
             this.dataGridView2.TabIndex = 2;
             this.dataGridView2.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridView2_CellBeginEdit);
             this.dataGridView2.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellEndEdit);
@@ -198,24 +199,32 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.messageToolStripMenuItem});
+            this.messageToolStripMenuItem,
+            this.logOutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(777, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(777, 35);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // messageToolStripMenuItem
             // 
             this.messageToolStripMenuItem.Name = "messageToolStripMenuItem";
-            this.messageToolStripMenuItem.Size = new System.Drawing.Size(48, 19);
+            this.messageToolStripMenuItem.Size = new System.Drawing.Size(69, 29);
             this.messageToolStripMenuItem.Text = "Inbox";
             this.messageToolStripMenuItem.Click += new System.EventHandler(this.messageToolStripMenuItem_Click);
             // 
+            // logOutToolStripMenuItem
+            // 
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(86, 29);
+            this.logOutToolStripMenuItem.Text = "Log out";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
+            // 
             // Receptionist
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(777, 694);
@@ -256,5 +265,6 @@
         private System.Windows.Forms.ToolStripMenuItem messageToolStripMenuItem;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
     }
 }

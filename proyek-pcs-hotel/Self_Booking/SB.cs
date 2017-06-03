@@ -205,5 +205,12 @@ namespace proyek_pcs_hotel
                 sB_21.tableLayoutPanel1.Padding = new Padding(0, 0, 0, 0);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainMenu a = new MainMenu();
+            a.Show();
+        }
     }
 }

@@ -19,5 +19,15 @@ namespace proyek_pcs_hotel
         {
             InitializeComponent();
         }
+
+        private void Laporan_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void buttonPrint_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

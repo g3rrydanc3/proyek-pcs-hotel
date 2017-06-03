@@ -35,6 +35,7 @@
             this.messageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.doubleClickUtkMenuYgSelesaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -49,12 +50,12 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 29);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 40);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(778, 515);
+            this.dataGridView1.Size = new System.Drawing.Size(778, 504);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
@@ -65,10 +66,11 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.soldOutToolStripMenuItem,
             this.messageToolStripMenuItem,
-            this.doubleClickUtkMenuYgSelesaiToolStripMenuItem});
+            this.doubleClickUtkMenuYgSelesaiToolStripMenuItem,
+            this.logOutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(778, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(778, 40);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -76,21 +78,21 @@
             // 
             this.soldOutToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.soldOutToolStripMenuItem.Name = "soldOutToolStripMenuItem";
-            this.soldOutToolStripMenuItem.Size = new System.Drawing.Size(83, 25);
+            this.soldOutToolStripMenuItem.Size = new System.Drawing.Size(121, 36);
             this.soldOutToolStripMenuItem.Text = "Sold Out";
             this.soldOutToolStripMenuItem.Click += new System.EventHandler(this.soldOutToolStripMenuItem_Click);
             // 
             // messageToolStripMenuItem
             // 
             this.messageToolStripMenuItem.Name = "messageToolStripMenuItem";
-            this.messageToolStripMenuItem.Size = new System.Drawing.Size(83, 25);
+            this.messageToolStripMenuItem.Size = new System.Drawing.Size(121, 36);
             this.messageToolStripMenuItem.Text = "Message";
             // 
             // doubleClickUtkMenuYgSelesaiToolStripMenuItem
             // 
             this.doubleClickUtkMenuYgSelesaiToolStripMenuItem.Enabled = false;
             this.doubleClickUtkMenuYgSelesaiToolStripMenuItem.Name = "doubleClickUtkMenuYgSelesaiToolStripMenuItem";
-            this.doubleClickUtkMenuYgSelesaiToolStripMenuItem.Size = new System.Drawing.Size(252, 25);
+            this.doubleClickUtkMenuYgSelesaiToolStripMenuItem.Size = new System.Drawing.Size(386, 36);
             this.doubleClickUtkMenuYgSelesaiToolStripMenuItem.Text = "Double Click utk Menu yg Selesai";
             // 
             // timer1
@@ -99,9 +101,16 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // logOutToolStripMenuItem
+            // 
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(109, 36);
+            this.logOutToolStripMenuItem.Text = "Log out";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
+            // 
             // Dapur
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(778, 544);
             this.Controls.Add(this.dataGridView1);
@@ -127,5 +136,6 @@
         private System.Windows.Forms.ToolStripMenuItem messageToolStripMenuItem;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripMenuItem doubleClickUtkMenuYgSelesaiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
     }
 }

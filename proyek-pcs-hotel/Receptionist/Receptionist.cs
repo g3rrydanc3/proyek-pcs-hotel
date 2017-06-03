@@ -152,7 +152,7 @@ namespace proyek_pcs_hotel
             f.label4.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             f.comboBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             f.label7.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            f.tanggal = dateTimePicker1.Value.ToString().Substring(0, 10);
+            f.tanggal = dateTimePicker1.Value;
             f.tipe = "booking";
             f.Show();
         }
@@ -185,6 +185,19 @@ namespace proyek_pcs_hotel
             f.conn = this.conn;
             f.divisi = 1;
             f.ShowDialog();
+        }
+
+        private void Receptionist_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //this.Hide();
+            //e.Cancel = true;
+        }
+        
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainMenu a = new MainMenu();
+            a.Show();
         }
     }
 }
